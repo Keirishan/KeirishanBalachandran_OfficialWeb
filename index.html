@@ -1,255 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keirishan Portfolio</title>
-    <link href="images/Title.png" rel="icon">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Keirishan Portfolio</title>
+  <link href="assets/img/Title.png" rel="icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
-        <a href="#home" class="logo">Keirishan</a>
-        <div id="menu-icon" class="fas fa-bars"></div>
 
-        <ul class="navbar">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about-me">ABOUT</a></li>
-            <li><a href="#portfolio">PROJECTS</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </header>
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/Title2.png" alt="Global">
+    <p>Keirishan Balachandran</p>
+  </a>
+  <p class="device-notification--message"></p>
+</div>
 
-    <!-- Home Page -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h1>Hi, I'm<span> Keirishan Balachandran</span></h1>
-            <h2>UG Student @SLTC Research University</h2><br>
-            <p> I’m currently refreshing my knowledge of Embedded Systems, Object Oriented Programming in C++ and Python as well as some Machine Learning Algorithms.
-            </p>
-            <p>    
-                I’m looking to collaborate with Embedded Systems Developers.
-            </p>
-            <a href="#contact" class="button">Contact Me</a>
-        </div>
-    </section>
-
-    <!-- About Page -->
-    <section class="about-me" id="about-me">
-        <div class="about-img">
-            <img src="images/Title.png" alt="About Picture">
-        </div>
-        <div class="about-text">
-            <h2>About</h2>
-            <h1>Keirishan Balachandran</h1><br>
-            <p>I'm Currently Studying BSc(Hons) in Engineering in Electronics and Telecommunication Engineering at SLTC Research University. I always looking for opportunities to learn new things and I'm a quick learner.
-                I solve problems in creative ways and I have learned the importance of applying classical strategies to modern-day projects. I always enjoy solving difficulties and correcting faults, which is why I picked this specific field to demonstrate my thoughts and abilities. I will take great care to execute any activity to my total satisfaction.
-                Embedded System, Robotics and Machine Learning are my main interests fields.</p><br>
-
-            <p>Embedded System, Cloud and AI are my main interests fields.</p><br><br>
-            <a href="https://drive.google.com/file/d/1t8y91RnuI-5pQzmdf9-78GeI_sxhrZ4f/view?usp=sharing" target="_blank" class="button">View Resume</a>    
-        </div>
-    </section>
-
-    <!-- Portfolio-->
-    <section class="portfolio" id="portfolio">
-        <div class="heading">
-            <h1>Projects</h1>
-        </div>
-
-        <!-- Content -->
-        <div class="portfolio-content">
-            <div class="p-box">
-                <div class="p-img">
-                    <img src="images/assistant system.png" alt="Portfolio4">
-                </div>
-                <h2>Computer Vision and Deep Learning Based Assistant System for the Visually Impaired</h2>
-                <p>This is my Final year project. Currently I' working on this project.</p><br>
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="assets/img/logo1.png" alt="Global">
+            <p>Keirish</p>
+          </a>
+          <button class="header--cta cta">Contact Me</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>About</span></li>
+            <li><span>Projects</span></li>
+            <li><span>Skills</span></li>
+            <li><span>Contact</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>BALACHANDRAN<br>KEIRISHAN</h1>
+                <!-- <h3>Embedded Engineer, Embedded Firmware developer, <br>PCB Designer, Cloud enthuastic</h3> -->
+                <!-- <p>I’m Currently Refreshing My Knowledge Of Embedded Systems, <br>Object Oriented Programming In C++ And Python As Well As <br> Some Machine Learning Algorithms.</p> -->
+                <!-- <p>I’m Looking To Collaborate With Embedded Systems Developers.</p> -->
+                <!-- <p>Hello, I'm a final year undergraduate student specializing in Electronics and Telecommunication. My academic journey has equipped me with a strong foundation in electronics, and my keen interest lies in exploring the realms of Electronics, Cloud, and AI. Beyond academics, I find joy in playing badminton and indulging in video games, balancing my technical pursuits with active and leisurely hobbies. Eager to embark on a career that merges my passion for electronics with cutting-edge technologies, I am excited about the possibilities that await in the dynamic intersection of hardware and software.</p> -->
+                
+                <button class="cta">Contact Me
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <img src="assets/img/keirish1.png" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3>Embedded Engineer</h3>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p> -->
+                </a>
+                <a href="#0">
+                  <h3>Embedded Firmware developer</h3>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p> -->
+                </a>
+                <a href="#0">
+                  <h3>PCB Designer</h3>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p> -->
+                </a>
+                <a href="#0">
+                  <h3>cloud Enthusiast</h3>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p> -->
+                </a>
+              </div>
             </div>
-            <div class="p-box">
-                <div class="p-img">
-                    <img src="images/Pharmacy.png" alt="Portfolio2">
+          </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h1>About Me</h1>
+                <h2>I'm Keirishan Balachandran
+                  <h3>R & D Intern @ SLTMobitel</h3>
+                  <h3>BSc(Hons) in Electronics and Telecommunication Engineering (Reading)</h3>
+                </h2>
+                <p>Hello and welcome to my portfolio! I am deeply passionate about exploring the intersections of technology, particularly in the realms of Electronics, Cloud, and Artificial Intelligence. My academic journey has equipped me with a strong foundation in these fields, and I am eager to embark on a career that allows me to contribute meaningfully to innovative projects. Beyond the academic sphere, I am an avid badminton player and enjoy immersing myself in the world of video games during my leisure time. Recognized for my collaborative spirit, I thrive as a team player and consistently strive to give my utmost dedication to any task at hand. My forte lies in robust problem-solving, and I am excited to leverage these skills as I transition from academia to the dynamic landscape of technology.</p>
+                <br>
+                <div class="intro--banner">
+                  <a href="https://www.overleaf.com/read/fgncjtrcshcn#34e97b" class="download-button" target="_blank" rel="noopener noreferrer">View Resume
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </a>
                 </div>
-                <h2>Pharmacy Management and Billing System</h2>
-                <p>This application has been developed specifically for a pharmacy with the purpose of efficiently managing inventory and generating purchase invoices.</p><br>
-                <a href="https://github.com/Keirishan/Pharmacy-Management-and-Billing-System" target="_blank" class="button">View More</a>
+              </div>
             </div>
-            <div class="p-box">
-                <div class="p-img">
-                    <img src="images/SmartDoor.png" alt="Portfolio1">
+          </li>          
+          <li class="l-section section">
+            <div class="work">
+              <h2>PROJECTS</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="https://github.com/Keirishan/RFID-Based-Smart-Door-Control-System">
+                      <div class="slider--item-image">
+                        <img src="assets/img/RFID-Door-Control.png" alt="RFID">
+                      </div>
+                      <p class="slider--item-title">RFID Based Smart Door Control System</p>
+                      <p class="slider--item-description">Utilizing RFID cards for authorized access, the system instantly notifies administrators of any unauthorized attempts, revolutionizing access control with heightened security and responsiveness.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="assets/img/fyp.png" alt="Visually Imapired">
+                      </div>
+                      <p class="slider--item-title">CDAS For VI</p>
+                      <p class="slider--item-description">Currently I'm actively engaged in the creation of an innovative assistant system tailored specifically to enhance the quality of life for individuals with visual impairments.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="https://github.com/Keirishan/Remote-Monitoring-of-Coke-Cans-in-a-vending-machine-with-Real-time-Updates">
+                      <div class="slider--item-image">
+                        <img src="assets/img/cokecan.png" alt="Coke Cane">
+                      </div>
+                      <p class="slider--item-title">Vending Machine Remote Monitoring</p>
+                      <p class="slider--item-description">A prototype system that monitors the temperature and availability of coke cans and sends real-time updates to a smartphone using MQTT protocol.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="https://github.com/Keirishan/Pharmacy-Management-and-Billing-System">
+                      <div class="slider--item-image">
+                        <img src="assets/img/Pharmacy1.png" alt="Pharmacy">
+                      </div>
+                      <p class="slider--item-title">Pharmacy Management And Billing System</p>
+                      <p class="slider--item-description">This application has been developed specifically for a pharmacy with the purpose of efficiently managing inventory and generating purchase invoices.</p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
                 </div>
-                <h2>RFID Based Smart Door Control System</h2>
-                <p>This is a prototype smart door control system with alerting.</p><br>
-                <a href="https://github.com/Keirishan/RFID-Based-Smart-Door-Control-System" target="_blank" class="button">View More</a>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-            <div class="p-box">
-                <div class="p-img">
-                    <img src="images/Vending Machine.jpg" alt="Portfolio3">
-                </div>
-                <h2>Vending Machine with-Real-time Updates</h2>
-                <p>This is a prototype system that monitors the temperature of Coke cans and sends real-time updates to a smartphone using MQTT protocol.</p><br>
-                <a href="https://github.com/Keirishan/Remote-Monitoring-of-Coke-Cans-in-a-vending-machine-with-Real-time-Updates" target="_blank" class="button">View More</a>
-            </div>
-        </div>
-    </section>
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 773b4cb360f64adf9691b92f070914af7cc28ef6
-    <!-- Skills -->
-    <section class="skills" id="skills">
-        <div class="heading">
-            <h1>Skills</h1>
-        </div>
-
-        <!-- Content -->
-        <div class="skills-content">
-            <div class="skills-area">
-                <div class="skill">
-                    <div class="skill-title">PCB Designing</div>
-                    <div class="skill-bar"></div>
-                    <div class="ui skill-fill">
-                    <span class="skill-percent">90%</span>
-                </div><br>
-                <div class="skill">
-                    <div class="skill-title">PYTHON</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps2 skill-fill">
-                    <span class="skill-percent">75%</span>
-                </div><br>
-                <div class="skill">
-                    <div class="skill-title">ARDUINO</div>
-                    <div class="skill-bar"></div>
-                    <div class="ui skill-fill">
-                    <span class="skill-percent">90%</span>
-                </div><br>
-                <div class="skill">
-                    <div class="skill-title">Raspberry Pi</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps7 skill-fill">
-                    <span class="skill-percent">60%</span>
-                </div><br>
-                <div class="skill">
-                    <div class="skill-title">ESP32</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps4 skill-fill">
-                    <span class="skill-percent">65%</span>
-                </div><br>
-                <div class="skill">
-                    <div class="skill-title">FPGA</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps6 skill-fill">
-                    <span class="skill-percent">20%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">Micro C for PIC</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps2 skill-fill">
-                    <span class="skill-percent">75%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">EasyEDA</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps1 skill-fill">
-                    <span class="skill-percent">80%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">Altium Circuit Maker</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps6 skill-fill">
-                    <span class="skill-percent">20%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">Visual Studio Code</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps3 skill-fill">
-                    <span class="skill-percent">70%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">Proteus</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps4 skill-fill">
-                    <span class="skill-percent">65%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">MS Azure</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps2 skill-fill">
-                    <span class="skill-percent">75%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">AWS</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps3 skill-fill">
-                    <span class="skill-percent">70%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">HTML</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps4 skill-fill">
-                    <span class="skill-percent">65%</span>
-                </div>
-                <div class="skill">
-                    <div class="skill-title">MySQL</div>
-                    <div class="skill-bar"></div>
-                    <div class="ps5 skill-fill">
-                    <span class="skill-percent">55%</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="heading">
-            <h1> Contact Me</h1>
-        </div>
-
-        <!-- Content -->
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="info-box">
-                    <i class="fas fa-phone-alt"></i>
-                    <p>(+94) 770688841</p>
-                </div>
-                <div class="info-box">
-                    <i class="fas fa-envelope-open"></i>
-                    <p>keirishan86@gmail.com</p>
-                </div>
-                <div class="info-box">
-                    <i class="fas fa-map-marker-alt"></i>
+          </li>
+          <!-- co -->
+          <li class="l-section section">
+            <div class="contact1"></div>
+          </li>
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
                     <p>Moratuwa, Colombo, Sri Lanka</p>
+                    <a href="mailto:keirishan86@gmail.com">keirishan86@gmail.com</a>
+                    <a href="tel:+148126287560">+94 770688841</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/">LinkedIn</a></li>
+                    <li><a href="https://github.com/Keirishan">Github</a></li>
+                    <!-- <li><a href="https://medium.com/@keirish15">Medium</a></li> -->
+                    <li><a href="mailto:keirishan86@gmail.com">Contact Us</a></li>
+                  </ul>
                 </div>
-                <div class="info-box social">
-                    <a href="https://www.facebook.com/Keirishan" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Keirishan" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
+              </div>
             </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <a href="" target="_blank" class="button" id="portfoliol">Contact Me</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cop;yright -->
-    <div class="copyright">
-        <p>© Keirishan Balachandran | All Right Reserved</p>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>About</li>
+    <li>Projects</li>
+    <li>Skills</li>
+    <li>Contact</li>
+  </ul>
+</div>
 
-
-
-
-
-    <script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
 </body>
 </html>
