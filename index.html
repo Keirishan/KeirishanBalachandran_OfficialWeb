@@ -10,6 +10,31 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+    h1, h2, h3 {
+        color: #b6b3b3;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #4b4a4a;
+    }
+</style>
 </head>
 <body>
 
@@ -42,6 +67,7 @@
             <li><span>About</span></li>
             <li><span>Projects</span></li>
             <li><span>Skills</span></li>
+            <li><span>Publications</span></li>
             <li><span>Contact</span></li>
           </ul>
         </nav>
@@ -88,13 +114,48 @@
           <li class="l-section section">
             <div class="about">
               <div class="about--banner">
-                <h1>About Me</h1>
-                <h2>I'm Keirishan Balachandran
-                  <h3>R & D Intern @ SLTMobitel  (from Aug 2023 to Feb 2024)</h3>
-                  <h3>BSc(Hons) in Electronics and Telecommunication Engineering (Reading)</h3>
-                </h2>
-                <p>Hello and welcome to my portfolio! I am deeply passionate about exploring the intersections of technology, particularly in the realms of Electronics, Cloud, and Artificial Intelligence. My academic journey has equipped me with a strong foundation in these fields, and I am eager to embark on a career that allows me to contribute meaningfully to innovative projects. Beyond the academic sphere, I am an avid badminton player and enjoy immersing myself in the world of video games during my leisure time. Recognized for my collaborative spirit, I thrive as a team player and consistently strive to give my utmost dedication to any task at hand. My forte lies in robust problem-solving, and I am excited to leverage these skills as I transition from academia to the dynamic landscape of technology.</p>
-                <br>
+                  <h1><center>About Me</center></h1>
+                  <!-- <h2>I'm Keirishan Balachandran</h2> -->
+                  
+                  <h3>EXPERIENCE</h3>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Position</th>
+                              <th>Organization</th>
+                              <th>Period</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Embedded System Engineer - Intern</td>
+                              <td>SilverlineIT</td>
+                              <td>April 2024 - Present</td>
+                          </tr>
+                          <tr>
+                              <td>R & D Intern</td>
+                              <td>SLTMobitel</td>
+                              <td>August 2023 - February 2024</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  
+                  <h3>EDUCATION</h3>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>BSc(Hons) in Engineering (Reading)</th>
+                            <th>Electronics and Telecommunication Engineering</th>
+                            <th>SLTC Research University</th>
+                        </tr>
+                    </thead>
+                </table>
+                  <!-- <ul>
+                      <li>BSc(Hons) in Electronics and Telecommunication Engineering (Reading)</li>
+                  </ul> -->
+                  
+                  <p>Hello and welcome to my portfolio! I am deeply passionate about exploring the intersections of technology, particularly in the realms of Electronics, Cloud, and Artificial Intelligence. My academic journey has equipped me with a strong foundation in these fields, and I am eager to embark on a career that allows me to contribute meaningfully to innovative projects. Beyond the academic sphere, I am an avid badminton player and enjoy immersing myself in the world of video games during my leisure time. Recognized for my collaborative spirit, I thrive as a team player and consistently strive to give my utmost dedication to any task at hand. My forte lies in robust problem-solving, and I am excited to leverage these skills as I transition from academia to the dynamic landscape of technology.</p>
+                  <br>
                 <div class="intro--banner">
                   <a href="https://drive.google.com/file/d/1R3ZGJ3FEpiefUG7nU7ww2htdOUfNpepE/view?usp=sharing" class="download-button" target="_blank" rel="noopener noreferrer">View Resume
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
@@ -112,6 +173,7 @@
               <h2>PROJECTS</h2>
               <div class="work--lockup">
                 <ul class="slider">
+                  <!-- RFID based door system project -->
                   <li class="slider--item slider--item-left">
                     <a href="https://github.com/Keirishan/RFID-Based-Smart-Door-Control-System">
                       <div class="slider--item-image">
@@ -121,15 +183,27 @@
                       <p class="slider--item-description">Utilizing RFID cards for authorized access, the system instantly notifies administrators of any unauthorized attempts, revolutionizing access control with heightened security and responsiveness.</p>
                     </a>
                   </li>
+                  <!-- Computer Vision and deep learning based assistant system for the visually impaired -->
                   <li class="slider--item slider--item-center">
                     <a href="#0">
                       <div class="slider--item-image">
                         <img src="assets/img/fyp.png" alt="Visually Imapired">
                       </div>
-                      <p class="slider--item-title">CDAS For VI</p>
-                      <p class="slider--item-description">Currently I'm actively engaged in the creation of an innovative assistant system tailored specifically to enhance the quality of life for individuals with visual impairments.</p>
+                      <p class="slider--item-title">Computer vision based assistant system for the VI</p>
+                      <p class="slider--item-description">I'm actively engaged in the creation of an innovative assistant system tailored specifically to enhance the quality of life for individuals with visual impairments. Additionally, I've created an online tool for visually impaired guardians to remotely monitor their whenever in the world.</p>
                     </a>
                   </li>
+                  <!-- APMS -->
+                  <li class="slider--item slider--item-left">
+                    <a href="">
+                      <div class="slider--item-image">
+                        <img src="assets/img/apms.png" alt="RFID">
+                      </div>
+                      <p class="slider--item-title">Alternative Power Monitoring System (APMS)</p>
+                      <p class="slider--item-description">APMS, a hybrid energy storage system with environmental applications. Developed an IoT device for monitoring turbine performance and environmental factors, alongside designing prototypes, firmware, and dashboards.</p>
+                    </a>
+                  </li>
+                  <!-- coke cane monitoring project -->
                   <li class="slider--item slider--item-right">
                     <a href="https://github.com/Keirishan/Remote-Monitoring-of-Coke-Cans-in-a-vending-machine-with-Real-time-Updates">
                       <div class="slider--item-image">
@@ -139,6 +213,7 @@
                       <p class="slider--item-description">A prototype system that monitors the temperature and availability of coke cans and sends real-time updates to a smartphone using MQTT protocol.</p>
                     </a>
                   </li>
+                  <!-- pharmacy management project -->
                   <li class="slider--item slider--item-right">
                     <a href="https://github.com/Keirishan/Pharmacy-Management-and-Billing-System">
                       <div class="slider--item-image">
@@ -169,9 +244,61 @@
               </div>
             </div>
           </li>
-          <!-- co -->
+          <!-- Skills - TAB -->
           <li class="l-section section">
             <div class="contact1"></div>
+          </li>
+          <!-- PUB and others TAB -->
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                  <h1><center>Publications and Volunteering Experiences</center></h1>
+                  <!-- <h2>I'm Keirishan Balachandran</h2> -->
+                  
+                  <h3>PUBLICATION</h3>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Computer Vision and Deep learning based assistant Systam for the Visually Impaired</th>
+                              <th>November 2023</th>
+                              <th>IRC 2023</th>
+                          </tr>
+                      </thead> 
+                  </table>
+                  <p>Published my final year project research paper in the IRC 2023 conferences which is organized by SLTC Research University</p>
+                  <br>
+                  <h3>PROFESSIONAL ASSOCIATIONS</h3>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Institute of Electrical and Electronics Engineers (IEEE)</th>
+                              <th>Student member - Membership number: 96895322</th>
+                              <th>IEEE Region: R10 -Asia and Pacific; Section: Sri Lanka</th>
+                          </tr>
+                      </thead> 
+                  </table>
+                  <br>
+                  <h3>VOLUNTEER EXPERIENCE</h3>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>IEEE STUDENT BRANCH OF SLTC Research University</th>
+                              <th>Member</th>
+                              <th>Jun 2020 - Present</th>
+                          </tr>
+                      </thead> 
+                      <thead>
+                        <tr>
+                            <th>IEEE Industrial Electronics Society SB of SLTC Research University</th>
+                            <th>Deputy Head - Report Writing Sub Committee</th>
+                            <th>Feb 2021 - Feb 2022</th>
+                        </tr>
+                    </thead> 
+                  </table>
+                  
+
+              </div>
+            </div>
           </li>
           <li class="l-section section">
             <div class="contact">
@@ -202,6 +329,7 @@
     <li>About</li>
     <li>Projects</li>
     <li>Skills</li>
+    <li>Publications</li>
     <li>Contact</li>
   </ul>
 </div>
