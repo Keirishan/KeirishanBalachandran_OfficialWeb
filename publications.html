@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Keirish Portfolio</title>
+    <link href="img/Title.png" rel="icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E293B',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, #3B82F6, transparent);
+            border-radius: 2px;
+        }
+        .bg-blur-effect {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            transition: all 0.8s ease;
+            animation: float 8s ease-in-out infinite;
+        }
+        .bg-blur-effect.primary {
+            background: rgb(59, 130, 246);
+            width: 400px;
+            height: 400px;
+        }
+        .bg-blur-effect.secondary {
+            background: rgb(139, 92, 246);
+            width: 350px;
+            height: 350px;
+            animation-delay: -2s;
+        }
+        .bg-blur-effect.accent {
+            background: rgb(236, 72, 153);
+            width: 300px;
+            height: 300px;
+            animation-delay: -4s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(50px, -50px) scale(1.1); }
+            50% { transform: translate(-30px, 30px) scale(0.9); }
+            75% { transform: translate(40px, 40px) scale(1.05); }
+        }
+        .section-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .section-content {
+            position: relative;
+            z-index: 1;
+        }
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .nav-link:hover::after {
+            width: 70%;
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+        }
+        .nav-menu {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .cursor-follower {
+            pointer-events: none;
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #3b82f6;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.15s ease;
+            z-index: 9999;
+            opacity: 0.7;
+        }
+        @media (hover: none) and (pointer: coarse) {
+            .cursor-follower {
+                display: none;
+            }
+        }
+        .cursor-follower.hover {
+            transform: translate(-50%, -50%) scale(1.5);
+            background-color: rgba(59, 130, 246, 0.1);
+            border-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Custom Cursor -->
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-gray-200/50">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html" class="group flex items-center space-x-2 text-2xl font-bold">
+                    <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                        Keirishan
+                    </span>
+                    <span class="text-gray-400 group-hover:text-blue-600 transition-colors duration-300">
+                        .ai
+                    </span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="about.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
+                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Experience</a>
+                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Skills</a>
+                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Projects</a>
+                    <a href="publications.html" class="nav-link px-3 py-2 text-blue-600">Publications</a>
+                    <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
+                        Contact
+                    </a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
+                    <a href="index.html" class="nav-link text-center">Home</a>
+                    <a href="about.html" class="nav-link text-center">About</a>
+                    <a href="experience.html" class="nav-link">Experience & Education</a>
+                    <a href="skills.html" class="nav-link text-center">Skills</a>
+                    <a href="projects.html" class="nav-link text-center">Projects</a>
+                    <a href="publications.html" class="nav-link text-center text-blue-600">Publications</a>
+                    <a href="contact.html" class="nav-link text-center">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Publications, Associations & Volunteerism Section -->
+    <section id="publications-involvement" class="section-wrapper py-20 bg-white pt-32">
+        <div class="bg-blur-effect primary" style="top: 10%; right: 5%;"></div>
+        <div class="bg-blur-effect secondary" style="bottom: 15%; left: 10%;"></div>
+        <div class="bg-blur-effect accent" style="top: 50%; right: 20%;"></div>
+
+        <div class="section-content container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold section-title inline-block">Publications, Associations & Volunteerism</h2>
+                <p class="text-gray-600 mt-8 max-w-2xl mx-auto">
+                    Explore my research publications, professional memberships, and volunteer contributions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Publications -->
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-600">Publications</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">Computer Vision and Deep Learning Based Assistance System for The Visually Impaired</h4>
+                            <p class="text-gray-600 text-sm mb-2">My final year project research paper was published at the IRC 2023 conference, organized by Sri Lanka Technology Campus.</p>
+                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=sqV9qkkAAAAJ&citation_for_view=sqV9qkkAAAAJ:u5HHmVD_uO8C" 
+                               class="text-blue-500 hover:underline text-sm inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> View Publication
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Associations -->
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-600">Professional Associations</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">IEEE Student Member</h4>
+                                <p class="text-gray-600 text-sm">Since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteer Experience -->
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-600">Volunteer Experience</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-bold text-gray-800">Member</h4>
+                            <p class="text-gray-600 text-sm">IEEE STUDENT BRANCH OF Sri Lanka Technology Campus</p>
+                            <p class="text-gray-500 text-xs">Jun 2020 - Mar 2024</p>
+                        </div>
+                        <div class="border-l-4 border-purple-500 pl-4">
+                            <h4 class="font-bold text-gray-800">Deputy Head</h4>
+                            <p class="text-gray-600 text-sm">IEEE Industrial Electronics Society SB of Sri Lanka Technology Campus</p>
+                            <p class="text-gray-500 text-xs">Feb 2021 - Feb 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Research Interests -->
+            <div class="mt-16">
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-600 text-center">Research Interests</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="text-center p-4 bg-blue-50 rounded-lg">
+                            <i class="fas fa-brain text-2xl text-blue-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Machine Learning</h4>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                            <i class="fas fa-eye text-2xl text-green-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Computer Vision</h4>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-lg">
+                            <i class="fas fa-microchip text-2xl text-purple-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Embedded Systems</h4>
+                        </div>
+                        <div class="text-center p-4 bg-orange-50 rounded-lg">
+                            <i class="fas fa-chart-line text-2xl text-orange-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Data Analytics</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-gradient-to-b from-gray-900 via-blue-900 to-gray-900 text-white py-16">
+        <div class="absolute top-0 left-0 w-full overflow-hidden">
+            <svg class="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                    class="fill-gray-50"></path>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 pt-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="inline-block group">
+                        <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent mb-4">
+                            Keirish<span class="text-blue-400">.ds</span>
+                        </h3>
+                    </a>
+                    <p class="text-gray-300 mb-6">Crafting smart solutions through data and hardware innovation</p>
+                    <div class="flex space-x-6 justify-center md:justify-start">
+                        <a href="https://github.com/Keirishan" target="_blank" 
+                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/" target="_blank"
+                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://medium.com/@keirish15" target="_blank"
+                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
+                            <i class="fab fa-medium text-2xl"></i>
+                        </a>
+                        <a href="mailto:keirishanb@outlook.com"
+                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h4 class="text-xl font-semibold mb-6 text-blue-300">Quick Links</h4>
+                    <div class="flex flex-col space-y-3">
+                        <a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">About</a>
+                        <a href="experience.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Experience</a>
+                        <a href="skills.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Skills</a>
+                        <a href="projects.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Projects</a>
+                        <a href="publications.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Publications</a>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <h4 class="text-xl font-semibold mb-6 text-blue-300">Contact</h4>
+                    <div class="space-y-3">
+                        <p class="text-gray-300 flex items-center justify-center md:justify-end gap-2">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            keirishanb@outlook.com
+                        </p>
+                        <p class="text-gray-300 flex items-center justify-center md:justify-end gap-2">
+                            <i class="fas fa-map-marker-alt text-blue-400"></i>
+                            Sri Lanka
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 mt-8 text-center border-t border-gray-700">
+                <p class="text-gray-400">
+                    <span class="bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
+                        &copy; 2025 Keirish
+                    </span>
+                    • All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('.mobile-menu-icon');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+
+        // Cursor follower
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.querySelector('.cursor-follower');
+            
+            if (window.matchMedia('(hover: hover)').matches) {
+                let mouseX = 0, mouseY = 0;
+                let cursorX = 0, cursorY = 0;
+
+                const animate = () => {
+                    const diffX = mouseX - cursorX;
+                    const diffY = mouseY - cursorY;
+                    
+                    cursorX += diffX * 1;
+                    cursorY += diffY * 1;
+                    
+                    cursor.style.left = cursorX + 'px';
+                    cursor.style.top = cursorY + 'px';
+                    
+                    requestAnimationFrame(animate);
+                };
+
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
+
+                const interactiveElements = document.querySelectorAll('a, button, input, textarea');
+                interactiveElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+                });
+
+                document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
+                document.addEventListener('mouseenter', () => cursor.style.opacity = '0.7');
+
+                animate();
+            }
+        });
+    </script>
+</body>
+</html>

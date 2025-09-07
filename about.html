@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keirish Portfolio</title>
+    <title>About - Keirish Portfolio</title>
     <link href="img/Title.png" rel="icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -69,51 +69,162 @@
                 0 8px 16px rgba(0, 0, 0, 0.07);
         }
 
-        .btn-hover-effect {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        .skill-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
         }
 
-        .btn-hover-effect:before {
+        .skill-card:hover {
+            transform: translateY(-10px) rotateX(10deg);
+            box-shadow: 
+                0 20px 40px -15px rgba(59, 130, 246, 0.3),
+                0 10px 20px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-icon {
+            transition: all 0.4s ease;
+        }
+
+        .skill-card:hover .skill-icon {
+            transform: translateZ(20px) scale(1.1);
+            color: #3B82F6;
+        }
+
+        .progress-bar {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.4) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(
+                45deg,
+                transparent 0%,
+                rgba(255,255,255,0.1) 45%,
+                rgba(255,255,255,0.2) 50%,
+                rgba(255,255,255,0.1) 55%,
+                transparent 100%
+            );
             transform: translateX(-100%);
-            transition: 0.6s;
+            transition: transform 0.6s;
         }
 
-        .btn-hover-effect:hover:before {
+        .project-card:hover::before {
             transform: translateX(100%);
         }
 
-        .code-editor {
+        .btn-primary {
             position: relative;
-            border-radius: 1rem;
-            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            z-index: 1;
         }
 
-        .code-editor:before {
+        .btn-primary::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #3b82f6, #2563eb, #1d4ed8);
-            border-radius: 1.1rem;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #3B82F6, #60A5FA);
             z-index: -1;
-            opacity: 0.5;
+            transition: all 0.4s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, #3B82F6, transparent);
+            border-radius: 2px;
+        }
+
+        input, textarea {
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            transform: translateY(-2px);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 60s ease-in-out infinite;
         }
 
         /* Add smooth scroll behavior */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Animation for project cards */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
         }
 
         /* Custom cursor styles */
@@ -147,6 +258,68 @@
             .cursor-dot, .cursor-dot-outline {
                 display: none;
             }
+        }
+
+        /* Wave Transition Styles */
+        .wave-transition {
+            --tw-gradient-to: #fff var(--tw-gradient-to-position);
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .wave-transition.flip {
+            transform: rotate(0);
+        }
+
+        .wave-transition svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+
+        .wave-transition .shape-fill {
+            fill: #ffffff;
+        }
+
+        /* Adjust section positioning */
+        section {
+            position: relative;
+            z-index: 1;
+        }
+
+        #projects {
+            margin-top: -1px;
+            background-color: #ffffff;
+        }
+
+        #contact {
+            margin-top: -1px;
+            background-color: rgb(249 250 251);
+        }
+
+        /* Add subtle animation to waves */
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-25px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .wave-transition svg path {
+            animation: wave 8s ease-in-out infinite;
+        }
+
+        .wave-transition.flip svg path {
+            animation: wave 8s ease-in-out infinite reverse;
         }
 
         /* Background Effects */
@@ -187,6 +360,126 @@
             50% { transform: translate(-30px, 30px) scale(0.9); }
             75% { transform: translate(40px, 40px) scale(1.05); }
         }
+
+        /* Section Styles */
+        .section-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Card Hover Effects */
+        .hover-card {
+            transition: all 0.3s ease;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Enhanced Glass Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        }
+
+        /* Enhanced Animations */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes slideInFromBottom {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Enhanced Background Effects */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #3b82f6, #2563eb, #1d4ed8, #1e40af);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        }
+
+        /* Enhanced Button Styles */
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover-effect:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .btn-hover-effect:hover:before {
+            transform: translateX(100%);
+        }
+
+        /* Enhanced Code Editor */
+        .code-editor {
+            position: relative;
+            border-radius: 1rem;
+            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .code-editor:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #3b82f6, #2563eb, #1d4ed8);
+            border-radius: 1.1rem;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Animated Elements */
+        .fade-in {
+            animation: slideInFromBottom 0.6s ease-out forwards;
+        }
+
+        .stagger-fade-in > * {
+            opacity: 0;
+            animation: slideInFromBottom 0.6s ease-out forwards;
+        }
+
+        .stagger-fade-in > *:nth-child(1) { animation-delay: 0.1s; }
+        .stagger-fade-in > *:nth-child(2) { animation-delay: 0.2s; }
+        .stagger-fade-in > *:nth-child(3) { animation-delay: 0.3s; }
+        .stagger-fade-in > *:nth-child(4) { animation-delay: 0.4s; }
 
         /* Header Menu Styles */
         .nav-link {
@@ -256,19 +549,6 @@
             background-color: rgba(59, 130, 246, 0.1);
             border-color: #2563eb;
         }
-
-        /* Blinking Cursor Style */
-        .blinking-cursor {
-            font-weight: bold;
-            font-size: 2rem;
-            animation: blink 0.8s infinite;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -280,7 +560,7 @@
         <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-gray-200/50">
             <div class="container mx-auto flex justify-between items-center">
                 <!-- Logo with enhanced gradient and animation -->
-                <a href="#" class="group flex items-center space-x-2 text-2xl font-bold">
+                <a href="index.html" class="group flex items-center space-x-2 text-2xl font-bold">
                     <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent bg-size-200 hover:bg-pos-100 transition-all duration-500">
                         Keirishan
                     </span>
@@ -291,13 +571,13 @@
 
                 <!-- Desktop Menu with enhanced hover effects -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link px-3 py-2 text-blue-600 relative group">
+                    <a href="index.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
                         <span>Home</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-100 transition-transform duration-300"></span>
-                    </a>
-                    <a href="about.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
-                        <span>About</span>
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </a>
+                    <a href="about.html" class="nav-link px-3 py-2 text-blue-600 relative group">
+                        <span>About</span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="experience.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
                         <span>Experience</span>
@@ -331,8 +611,8 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
-                    <a href="index.html" class="nav-link text-center text-blue-600">Home</a>
-                    <a href="about.html" class="nav-link text-center">About</a>
+                    <a href="index.html" class="nav-link text-center">Home</a>
+                    <a href="about.html" class="nav-link text-center text-blue-600">About</a>
                     <a href="experience.html" class="nav-link">Experience & Education</a>
                     <a href="skills.html" class="nav-link text-center">Skills</a>
                     <a href="projects.html" class="nav-link text-center">Projects</a>
@@ -383,90 +663,62 @@
         });
     </script>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-blue-50 to-white pt-10 md:pt-0">
-        <!-- Enhanced Background Elements -->
-        <div class="absolute inset-0">
-            <div class="bg-blur-effect primary top-10 left-20 animate-pulse"></div>
-            <div class="bg-blur-effect secondary bottom-10 right-20 animate-float"></div>
+    <!-- About Section -->
+    <section id="about" class="relative bg-white py-24 pt-32">
+        <!-- Modern Wave Divider -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden" style="transform: translateY(-99%)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="w-full h-[160px]">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,128C672,128,768,160,864,165.3C960,171,1056,149,1152,133.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
         </div>
-
-        <!-- Main Content -->
-        <div class="container mx-auto px-4 z-10">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <!-- Left Content -->
-                <div class="lg:w-1/2 space-y-8 stagger-fade-in">
-                    <div class="space-y-4 text-center">
-                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text leading-tight py-5 hover:scale-105 transition-transform duration-300">
-                          <span></span>
-                          <span id="typed-role" class="text-blue-500"></span>
-                          <span class="blinking-cursor">|</span>
-                        </h1>
-                      
-                        <p class="text-gray-600 text-lg leading-relaxed mt-6 fade-in">
-                            Leveraging Python to extract insights from data and engineer intelligent solutions. Passionate about building data-driven applications, automating workflows, and deploying scalable machine learning models that solve real-world problems.
-                        </p>
-                      </div>
-                    
-                    <div class="flex gap-4 pt-4">
-                        <a href="projects.html" class="gradient-border inline-block btn-hover-effect">
-                            <span class="btn bg-white hover:bg-gray-50 text-gray-900 px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg">
-                                View Projects
-                            </span>
-                        </a>
-                        <a href="contact.html" class="btn bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg btn-hover-effect">
-                            Contact Me
-                        </a>
-                    </div>
+        
+        <!-- About Content with more spacing -->
+        <div class="container mx-auto px-4 pt-16">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="img/keirish1.png" alt="About Me" class="rounded-lg shadow-lg">
                 </div>
-
-                <!-- Right Content - Enhanced Code Preview -->
-                <div class="lg:w-1/2 float-animation w-full">
-                    <div class="code-editor p-6 rounded-2xl shadow-xl bg-gray-900/95 backdrop-blur-xl hover:scale-105 transition-transform duration-300">
-                        <!-- Code Editor Header -->
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500 hover:opacity-80 transition-opacity"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500 hover:opacity-80 transition-opacity"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500 hover:opacity-80 transition-opacity"></div>
-                            </div>
-                            <div class="text-gray-400 text-sm px-3 py-1 rounded-md bg-gray-800/50">developer.py</div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-600 mb-6">
+                        Welcome to my portfolio! I am deeply passionate about the convergence of technology, particularly in the areas of Python development, Data Science, and Embedded Systems. With a strong academic foundation and hands-on experience in these domains, I am excited to contribute to forward-thinking, impactful projects. 
+                        <br>
+                        Outside of work and academics, I am an enthusiastic badminton player and enjoy exploring immersive video games during my free time. Known for my collaborative nature and dedication, I thrive in team-oriented environments and consistently approach challenges with a problem-solving mindset. As I transition into the professional technology landscape, I am eager to apply my expertise in Python and other technologies to innovate and make a meaningful difference.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Backend Development</span>
                         </div>
-                        <!-- Code Content -->
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">class</span> <span class="text-blue-400">PythonDeveloper</span><span class="text-gray-400">:</span></code></pre>
-
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">__init__</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.name</span> <span class="text-gray-400">=</span> <span class="text-orange-300">"Keirishan"</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.title</span> <span class="text-gray-400">=</span> <span class="text-orange-300">"Data Engineer / Data Scientist"</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.skills</span> <span class="text-gray-400">=</span> <span class="text-yellow-300">[</span><span class="text-orange-300">"Python"</span><span class="text-gray-400">,</span> <span class="text-orange-300">"Data Science"</span><span class="text-gray-400">,</span> <span class="text-orange-300">"Embedded Systems"</span><span class="text-yellow-300">]</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.passion</span> <span class="text-gray-400">=</span> <span class="text-orange-300">"Crafting Intelligent Data Pipelines"</span></code></pre>
-
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">code</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.eat()</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.sleep()</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.code()</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.repeat()</span></code></pre>
-
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">eat</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">sleep</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">code</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">repeat</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>API Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Data Visualization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Model Deployment</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Big Data Analytics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Data Preprocessing</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Enhanced Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div class="p-2 bg-white/30 backdrop-blur-sm rounded-full">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path class="animate-pulse" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
             </div>
         </div>
     </section>
-
 
     <!-- Footer with Enhanced Design -->
     <footer class="relative bg-gradient-to-b from-gray-900 via-blue-900 to-gray-900 text-white py-16">
@@ -482,7 +734,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
                 <!-- Brand Section -->
                 <div class="text-center md:text-left">
-                    <a href="#" class="inline-block group">
+                    <a href="index.html" class="inline-block group">
                         <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent mb-4">
                             Keirish<span class="text-blue-400">.ds</span>
                         </h3>
@@ -620,67 +872,3 @@
     </script>
 </body>
 </html>
-
-<!-- Typing Script -->
-<script>
-    const roles = ["Python Developer", "Data Engineer", "Data Scientist"];
-    let roleIndex = 0, charIndex = 0, isDeleting = false;
-    const typingSpeed = 120;
-    const waitTime = 1000;
-    const typedText = document.getElementById("typed-role");
-  
-    function typeRole() {
-      const current = roles[roleIndex];
-      if (isDeleting) {
-        typedText.textContent = current.substring(0, charIndex--);
-      } else {
-        typedText.textContent = current.substring(0, charIndex++);
-      }
-  
-      if (!isDeleting && charIndex === current.length + 1) {
-        isDeleting = true;
-        setTimeout(typeRole, waitTime);
-        return;
-      }
-  
-      if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-      }
-  
-      setTimeout(typeRole, isDeleting ? 50 : typingSpeed);
-    }
-  
-    document.addEventListener("DOMContentLoaded", typeRole);
-</script>
-  
-<script>
-    // Disable right-click
-    document.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
-    });
-  
-    // Disable specific key combinations
-    document.addEventListener('keydown', function (e) {
-      // Ctrl+U
-      if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-      }
-      // Ctrl+Shift+I (Dev Tools)
-      if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        e.preventDefault();
-      }
-      // F12
-      if (e.key === 'F12') {
-        e.preventDefault();
-      }
-      // Ctrl+Shift+C (Inspect)
-      if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-        e.preventDefault();
-      }
-      // Ctrl+Shift+J (Console)
-      if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-        e.preventDefault();
-      }
-    });
-</script>
