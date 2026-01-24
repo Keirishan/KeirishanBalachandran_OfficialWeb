@@ -52,12 +52,12 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(71, 85, 105, 0.3);
             box-shadow: 
-                0 8px 32px 0 rgba(31, 38, 135, 0.1),
-                0 4px 8px rgba(0, 0, 0, 0.05);
+                0 8px 32px 0 rgba(59, 130, 246, 0.1),
+                0 4px 8px rgba(0, 0, 0, 0.3);
             transform-style: preserve-3d;
             transition: all 0.3s ease;
         }
@@ -65,8 +65,8 @@
         .glass-card:hover {
             transform: translateY(-5px) rotateX(2deg) rotateY(2deg);
             box-shadow: 
-                0 12px 40px 0 rgba(31, 38, 135, 0.15),
-                0 8px 16px rgba(0, 0, 0, 0.07);
+                0 12px 40px 0 rgba(59, 130, 246, 0.3),
+                0 8px 16px rgba(59, 130, 246, 0.2);
         }
 
         .skill-card {
@@ -282,7 +282,7 @@
         }
 
         .wave-transition .shape-fill {
-            fill: #ffffff;
+            fill: #1e293b;
         }
 
         /* Adjust section positioning */
@@ -293,7 +293,7 @@
 
         #projects {
             margin-top: -1px;
-            background-color: #ffffff;
+            background-color: #1e293b;
         }
 
         #contact {
@@ -327,8 +327,8 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.15;
-            mix-blend-mode: multiply;
+            opacity: 0.2;
+            mix-blend-mode: screen;
             pointer-events: none;
             transition: all 0.8s ease;
             animation: float 8s ease-in-out infinite;
@@ -512,8 +512,8 @@
 
         .nav-menu {
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(71, 85, 105, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -551,13 +551,13 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900">
     <!-- Custom Cursor -->
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-gray-200/50">
+        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-gray-900/90 border-b border-gray-700/50">
             <div class="container mx-auto flex justify-between items-center">
                 <!-- Logo with enhanced gradient and animation -->
                 <a href="index.html" class="group flex items-center space-x-2 text-2xl font-bold">
@@ -571,29 +571,29 @@
 
                 <!-- Desktop Menu with enhanced hover effects -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="index.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Home</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="about.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="about.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>About</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="experience.html" class="nav-link px-3 py-2 text-blue-600 relative group">
+                    <a href="experience.html" class="nav-link px-3 py-2 text-blue-400 relative group">
                         <span>Experience</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Skills</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Projects</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Publications</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
                         Contact
@@ -601,8 +601,8 @@
                 </div>
 
                 <!-- Enhanced Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -611,13 +611,13 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
-                    <a href="index.html" class="nav-link text-center">Home</a>
-                    <a href="about.html" class="nav-link text-center">About</a>
-                    <a href="experience.html" class="nav-link text-center text-blue-600">Experience & Education</a>
-                    <a href="skills.html" class="nav-link text-center">Skills</a>
-                    <a href="projects.html" class="nav-link text-center">Projects</a>
-                    <a href="publications.html" class="nav-link text-center">Publications</a>
-                    <a href="contact.html" class="nav-link text-center">Contact</a>
+                    <a href="index.html" class="nav-link text-center text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link text-center text-gray-300">About</a>
+                    <a href="experience.html" class="nav-link text-center text-blue-400">Experience & Education</a>
+                    <a href="skills.html" class="nav-link text-center text-gray-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-center text-gray-300">Projects</a>
+                    <a href="publications.html" class="nav-link text-center text-gray-300">Publications</a>
+                    <a href="contact.html" class="nav-link text-center text-gray-300">Contact</a>
                 </div>
             </div>
         </div>
@@ -666,19 +666,19 @@
     <!-- Wave Transition 2 -->
     <div class="wave-transition flip">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" fill="#1e293b"></path>
         </svg>
     </div>
     <!-- Experience & Education Section with Consistent Style -->
-    <section id="experience-education" class="section-wrapper py-20 bg-white">
+    <section id="experience-education" class="section-wrapper py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <!-- Background Blur Effects -->
         <div class="bg-blur-effect primary" style="top: 10%; right: 5%;"></div>
         <div class="bg-blur-effect secondary" style="bottom: 15%; left: 10%;"></div>
     
         <div class="section-content container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold section-title inline-block">Experience & Education</h2>
-            <p class="text-gray-600 mt-8 max-w-2xl mx-auto">
+            <h2 class="text-4xl font-bold section-title inline-block bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Experience & Education</h2>
+            <p class="text-gray-300 mt-8 max-w-2xl mx-auto">
             A journey through my academic background and professional experiences
             </p>
         </div>
@@ -688,51 +688,51 @@
     
             <!-- Experience Column -->
             <div>
-            <h3 class="text-2xl font-semibold mb-6 text-blue-600">Experience</h3>
+            <h3 class="text-2xl font-semibold mb-6 text-blue-400">Experience</h3>
     
             <div class="space-y-6">
                 <!-- Job 1 -->
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <h4 class="text-xl font-bold text-gray-800">Software Engineer</h4>
-                    <p class="text-sm text-gray-500">LOWCODEMINDS • October 2025 – Present</p>
-                    <h4 class="text-xl font-bold text-gray-800">Consultant</h4>
-                    <p class="text-sm text-gray-500">LOWCODEMINDS • September 2024 – September 2025</p>
-                    <p class="mt-2 text-gray-600">Experienced in Python backend development with expertise in building scalable FastAPI APIs. Currently exploring practical applications of AI, agentic workflows, and low-code tools to streamline development, enable automation, and improve rapid prototyping.</p>
+                <div class="p-6 bg-gray-800/80 border border-gray-700 rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/20 transition-shadow">
+                    <h4 class="text-xl font-bold text-gray-100">Software Engineer</h4>
+                    <p class="text-sm text-gray-400">LOWCODEMINDS • October 2025 – Present</p>
+                    <h4 class="text-xl font-bold text-gray-100">Consultant</h4>
+                    <p class="text-sm text-gray-400">LOWCODEMINDS • September 2024 – September 2025</p>
+                    <p class="mt-2 text-gray-300">Experienced in Python backend development with expertise in building scalable FastAPI APIs. Currently exploring practical applications of AI, agentic workflows, and low-code tools to streamline development, enable automation, and improve rapid prototyping.</p>
                 </div>
 
                 <!-- Job 2 -->
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <h4 class="text-xl font-bold text-gray-800">Embedded Systems Intern</h4>
-                <p class="text-sm text-gray-500">SilverlineIT • April 2024 – August 2024</p>
-                <p class="mt-2 text-gray-600">Embedded Systems Co-op focusing on IoT projects such as automated irrigation and smart toys. Developed firmware with C++, integrated MQTT protocols, and implemented cloud data synchronization using Firebase.</p>
+                <div class="p-6 bg-gray-800/80 border border-gray-700 rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/20 transition-shadow">
+                <h4 class="text-xl font-bold text-gray-100">Embedded Systems Intern</h4>
+                <p class="text-sm text-gray-400">SilverlineIT • April 2024 – August 2024</p>
+                <p class="mt-2 text-gray-300">Embedded Systems Co-op focusing on IoT projects such as automated irrigation and smart toys. Developed firmware with C++, integrated MQTT protocols, and implemented cloud data synchronization using Firebase.</p>
                 </div>
     
                 <!-- Job 3 -->
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <h4 class="text-xl font-bold text-gray-800">R&D Intern</h4>
-                <p class="text-sm text-gray-500">SltMobitel-Digital Lab • August 2023 – February 2024</p>
-                <p class="mt-2 text-gray-600">Worked as an R&D Intern, developing an IoT-based hybrid energy storage system (APMS) with a focus on environmental applications. Designed device prototypes, developed firmware, and created dashboards for real-time data visualization.</p>
+                <div class="p-6 bg-gray-800/80 border border-gray-700 rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/20 transition-shadow">
+                <h4 class="text-xl font-bold text-gray-100">R&D Intern</h4>
+                <p class="text-sm text-gray-400">SltMobitel-Digital Lab • August 2023 – February 2024</p>
+                <p class="mt-2 text-gray-300">Worked as an R&D Intern, developing an IoT-based hybrid energy storage system (APMS) with a focus on environmental applications. Designed device prototypes, developed firmware, and created dashboards for real-time data visualization.</p>
                 </div>
             </div>
             </div>
     
             <!-- Education Column -->
             <div>
-            <h3 class="text-2xl font-semibold mb-6 text-blue-600">Education</h3>
+            <h3 class="text-2xl font-semibold mb-6 text-blue-400">Education</h3>
     
             <div class="space-y-6">
                 <!-- Degree 1 -->
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <h4 class="text-xl font-bold text-gray-800">MSc in Computer Science (Specializing in Data Science Engineering and Analytics)</h4>
-                <p class="text-sm text-gray-500">University of Moratuwa • 2025 – 2026</p>
-                <p class="mt-2 text-gray-600">Specializing in Data Science Engineering and Analysis, covering Machine Learning, Big Data, and Data Engineering pipelines.</p>
+                <div class="p-6 bg-gray-800/80 border border-gray-700 rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/20 transition-shadow">
+                <h4 class="text-xl font-bold text-gray-100">MSc in Computer Science (Specializing in Data Science Engineering and Analytics)</h4>
+                <p class="text-sm text-gray-400">University of Moratuwa • 2025 – 2026</p>
+                <p class="mt-2 text-gray-300">Specializing in Data Science Engineering and Analysis, covering Machine Learning, Big Data, and Data Engineering pipelines.</p>
                 </div>
     
                 <!-- Degree 2 -->
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <h4 class="text-xl font-bold text-gray-800">BSc(Hons) in Engineering in Electronics & Telecommunication</h4>
-                <p class="text-sm text-gray-500">Sri Lanka Technology Campus • 2020 – 2024</p>
-                <p class="mt-2 text-gray-600">Studied digital systems, microcontrollers, and communication protocols with practical experience in embedded systems.</p>
+                <div class="p-6 bg-gray-800/80 border border-gray-700 rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/20 transition-shadow">
+                <h4 class="text-xl font-bold text-gray-100">BSc(Hons) in Engineering in Electronics & Telecommunication</h4>
+                <p class="text-sm text-gray-400">Sri Lanka Technology Campus • 2020 – 2024</p>
+                <p class="mt-2 text-gray-300">Studied digital systems, microcontrollers, and communication protocols with practical experience in embedded systems.</p>
                 </div>
             </div>
             </div>
@@ -747,7 +747,7 @@
         <div class="absolute top-0 left-0 w-full overflow-hidden">
             <svg class="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                    class="fill-gray-50"></path>
+                    class="fill-gray-900"></path>
             </svg>
         </div>
 

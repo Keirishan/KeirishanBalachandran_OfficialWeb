@@ -26,15 +26,15 @@
     </script>
     <style>
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.1);
             transition: all 0.3s ease;
         }
         .glass-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+            box-shadow: 0 12px 40px 0 rgba(59, 130, 246, 0.3);
         }
         .section-title {
             position: relative;
@@ -54,8 +54,8 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.15;
-            mix-blend-mode: multiply;
+            opacity: 0.2;
+            mix-blend-mode: screen;
             pointer-events: none;
             transition: all 0.8s ease;
             animation: float 8s ease-in-out infinite;
@@ -117,8 +117,8 @@
         }
         .nav-menu {
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(71, 85, 105, 0.2);
         }
         .cursor-follower {
             pointer-events: none;
@@ -150,13 +150,13 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900">
     <!-- Custom Cursor -->
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-gray-200/50">
+        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-gray-900/90 border-b border-gray-700/50">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="index.html" class="group flex items-center space-x-2 text-2xl font-bold">
                     <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
@@ -168,19 +168,19 @@
                 </a>
 
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Home</a>
-                    <a href="about.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
-                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Experience</a>
-                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Skills</a>
-                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Projects</a>
-                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Publications</a>
+                    <a href="index.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Home</a>
+                    <a href="about.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">About</a>
+                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Experience</a>
+                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Skills</a>
+                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Projects</a>
+                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Publications</a>
                     <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
                         Contact
                     </a>
                 </div>
 
-                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -188,28 +188,28 @@
 
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
-                    <a href="index.html" class="nav-link text-center">Home</a>
-                    <a href="about.html" class="nav-link text-center">About</a>
-                    <a href="experience.html" class="nav-link">Experience & Education</a>
-                    <a href="skills.html" class="nav-link text-center">Skills</a>
-                    <a href="projects.html" class="nav-link text-center">Projects</a>
-                    <a href="publications.html" class="nav-link text-center">Publications</a>
-                    <a href="contact.html" class="nav-link text-center text-blue-600">Contact</a>
+                    <a href="index.html" class="nav-link text-center text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link text-center text-gray-300">About</a>
+                    <a href="experience.html" class="nav-link text-gray-300">Experience & Education</a>
+                    <a href="skills.html" class="nav-link text-center text-gray-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-center text-gray-300">Projects</a>
+                    <a href="publications.html" class="nav-link text-center text-gray-300">Publications</a>
+                    <a href="contact.html" class="nav-link text-center text-blue-400">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-wrapper py-20 bg-gray-50 pt-32">
+    <section id="contact" class="section-wrapper py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 pt-32">
         <div class="bg-blur-effect primary" style="bottom: 20%; right: 10%;"></div>
         <div class="bg-blur-effect secondary" style="top: 30%; left: 20%;"></div>
         <div class="bg-blur-effect accent" style="top: 10%; right: 30%;"></div>
 
         <div class="section-content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold section-title inline-block">Get in Touch</h2>
-                <p class="text-gray-600 mt-8 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold section-title inline-block bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Get in Touch</h2>
+                <p class="text-gray-300 mt-8 max-w-2xl mx-auto">
                     Feel free to reach out if you have any questions or would like to get in touch.
                     Whether it's about a project, collaboration, or just to say hello, I'd love to hear from you.
                     Please fill out the form below, and I'll get back to you as soon as possible.
@@ -223,39 +223,39 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="space-y-2">
-                            <label for="name" class="block text-gray-700 font-medium">Name</label>
+                            <label for="name" class="block text-gray-100 font-medium">Name</label>
                             <input type="text" id="name" name="name"
-                                class="w-full px-4 py-3 rounded-lg bg-white/50 border border-gray-200 
-                                focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 
+                                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500
+                                focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 
                                 transition-all duration-300" required>
                         </div>
                         <div class="space-y-2">
-                            <label for="email" class="block text-gray-700 font-medium">Email</label>
+                            <label for="email" class="block text-gray-100 font-medium">Email</label>
                             <input type="email" id="email" name="email"
-                                class="w-full px-4 py-3 rounded-lg bg-white/50 border border-gray-200 
-                                focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 
+                                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500
+                                focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 
                                 transition-all duration-300" required>
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <label for="subject" class="block text-gray-700 font-medium">Subject</label>
+                        <label for="subject" class="block text-gray-100 font-medium">Subject</label>
                         <input type="text" id="subject" name="subject"
-                            class="w-full px-4 py-3 rounded-lg bg-white/50 border border-gray-200 
-                            focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 
+                            class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500
+                            focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 
                             transition-all duration-300" required>
                     </div>
 
                     <div class="space-y-2">
-                        <label for="message" class="block text-gray-700 font-medium">Message</label>
+                        <label for="message" class="block text-gray-100 font-medium">Message</label>
                         <textarea id="message" name="message" rows="5"
-                                class="w-full px-4 py-3 rounded-lg bg-white/50 border border-gray-200 
-                                focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 
+                                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500
+                                focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 
                                 transition-all duration-300" required></textarea>
                     </div>
 
                     <button type="submit"
-                            class="w-full bg-gradient-to-r from-primary to-blue-600 text-white py-4 rounded-lg 
+                            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 rounded-lg 
                             hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 
                             transition-all duration-300">
                         Send Message to Keirish
@@ -265,48 +265,48 @@
                 <!-- Contact Information Cards -->
                 <div class="grid md:grid-cols-3 gap-6 mt-16">
                     <div class="glass-card p-6 rounded-xl text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-envelope text-2xl text-blue-600"></i>
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-2xl text-blue-400"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
-                        <p class="text-gray-600">keirishanb@outlook.com</p>
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2">Email</h3>
+                        <p class="text-gray-300">keirishanb@outlook.com</p>
                     </div>
                     
                     <div class="glass-card p-6 rounded-xl text-center">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-map-marker-alt text-2xl text-green-600"></i>
+                        <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt text-2xl text-green-400"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Location</h3>
-                        <p class="text-gray-600">Sri Lanka</p>
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2">Location</h3>
+                        <p class="text-gray-300">Sri Lanka</p>
                     </div>
                     
                     <div class="glass-card p-6 rounded-xl text-center">
-                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-clock text-2xl text-purple-600"></i>
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-2xl text-purple-400"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Response Time</h3>
-                        <p class="text-gray-600">Within 24 hours</p>
+                        <h3 class="text-lg font-semibold text-gray-100 mb-2">Response Time</h3>
+                        <p class="text-gray-300">Within 24 hours</p>
                     </div>
                 </div>
 
                 <!-- Social Media Links -->
                 <div class="mt-16 text-center">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-8">Connect with me on social media</h3>
+                    <h3 class="text-2xl font-semibold text-gray-100 mb-8">Connect with me on social media</h3>
                     <div class="flex justify-center space-x-6">
                         <a href="https://github.com/Keirishan" target="_blank" 
-                           class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors duration-300">
+                           class="w-12 h-12 bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-100 rounded-full flex items-center justify-center transition-colors duration-300">
                             <i class="fab fa-github text-xl"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/" target="_blank"
-                           class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300">
+                           class="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-300">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
                         <a href="https://medium.com/@keirish15" target="_blank"
-                           class="w-12 h-12 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-300">
+                           class="w-12 h-12 bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-100 rounded-full flex items-center justify-center transition-colors duration-300">
                             <i class="fab fa-medium text-xl"></i>
                         </a>
                         <a href="mailto:keirishanb@outlook.com"
-                           class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-300">
+                           class="w-12 h-12 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition-colors duration-300">
                             <i class="fas fa-envelope text-xl"></i>
                         </a>
                     </div>
@@ -320,7 +320,7 @@
         <div class="absolute top-0 left-0 w-full overflow-hidden">
             <svg class="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                    class="fill-gray-50"></path>
+                    class="fill-gray-900"></path>
             </svg>
         </div>
 

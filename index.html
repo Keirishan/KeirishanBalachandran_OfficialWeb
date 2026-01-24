@@ -52,12 +52,12 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(71, 85, 105, 0.3);
             box-shadow: 
-                0 8px 32px 0 rgba(31, 38, 135, 0.1),
-                0 4px 8px rgba(0, 0, 0, 0.05);
+                0 8px 32px 0 rgba(0, 0, 0, 0.3),
+                0 4px 8px rgba(0, 0, 0, 0.2);
             transform-style: preserve-3d;
             transition: all 0.3s ease;
         }
@@ -65,8 +65,8 @@
         .glass-card:hover {
             transform: translateY(-5px) rotateX(2deg) rotateY(2deg);
             box-shadow: 
-                0 12px 40px 0 rgba(31, 38, 135, 0.15),
-                0 8px 16px rgba(0, 0, 0, 0.07);
+                0 12px 40px 0 rgba(59, 130, 246, 0.2),
+                0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .btn-hover-effect {
@@ -154,8 +154,8 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.15;
-            mix-blend-mode: multiply;
+            opacity: 0.2;
+            mix-blend-mode: screen;
             pointer-events: none;
             transition: all 0.8s ease;
             animation: float 8s ease-in-out infinite;
@@ -219,13 +219,13 @@
 
         .nav-menu {
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(71, 85, 105, 0.2);
         }
 
         @media (max-width: 768px) {
             .nav-menu {
-                background: rgba(255, 255, 255, 0.95);
+                background: rgba(15, 23, 42, 0.95);
             }
         }
 
@@ -271,58 +271,58 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900">
     <!-- Custom Cursor -->
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-gray-200/50">
+        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-gray-900/90 border-b border-gray-700/50">
             <div class="container mx-auto flex justify-between items-center">
                 <!-- Logo with enhanced gradient and animation -->
                 <a href="#" class="group flex items-center space-x-2 text-2xl font-bold">
-                    <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent bg-size-200 hover:bg-pos-100 transition-all duration-500">
+                    <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent bg-size-200 hover:bg-pos-100 transition-all duration-500">
                         Keirishan
                     </span>
-                    <span class="text-gray-400 group-hover:text-blue-600 transition-colors duration-300">
+                    <span class="text-gray-400 group-hover:text-blue-400 transition-colors duration-300">
                         .ai
                     </span>
                 </a>
 
                 <!-- Desktop Menu with enhanced hover effects -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link px-3 py-2 text-blue-600 relative group">
+                    <a href="index.html" class="nav-link px-3 py-2 text-blue-400 relative group">
                         <span>Home</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="about.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="about.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>About</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Experience</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Skills</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Projects</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Publications</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
+                    <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-0.5 transition-all duration-300">
                         Contact
                     </a>
                 </div>
 
                 <!-- Enhanced Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -331,13 +331,13 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
-                    <a href="index.html" class="nav-link text-center text-blue-600">Home</a>
-                    <a href="about.html" class="nav-link text-center">About</a>
-                    <a href="experience.html" class="nav-link">Experience & Education</a>
-                    <a href="skills.html" class="nav-link text-center">Skills</a>
-                    <a href="projects.html" class="nav-link text-center">Projects</a>
-                    <a href="publications.html" class="nav-link text-center">Publications</a>
-                    <a href="contact.html" class="nav-link text-center">Contact</a>
+                    <a href="index.html" class="nav-link text-center text-blue-400">Home</a>
+                    <a href="about.html" class="nav-link text-center text-gray-300">About</a>
+                    <a href="experience.html" class="nav-link text-gray-300">Experience & Education</a>
+                    <a href="skills.html" class="nav-link text-center text-gray-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-center text-gray-300">Projects</a>
+                    <a href="publications.html" class="nav-link text-center text-gray-300">Publications</a>
+                    <a href="contact.html" class="nav-link text-center text-gray-300">Contact</a>
                 </div>
             </div>
         </div>
@@ -384,7 +384,7 @@
     </script>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-blue-50 to-white pt-10 md:pt-0">
+    <section id="hero" class="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 pt-10 md:pt-0">
         <!-- Enhanced Background Elements -->
         <div class="absolute inset-0">
             <div class="bg-blur-effect primary top-10 left-20 animate-pulse"></div>
@@ -397,24 +397,24 @@
                 <!-- Left Content -->
                 <div class="lg:w-1/2 space-y-8 stagger-fade-in">
                     <div class="space-y-4 text-center">
-                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text leading-tight py-5 hover:scale-105 transition-transform duration-300">
+                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 text-transparent bg-clip-text leading-tight py-5 hover:scale-105 transition-transform duration-300">
                           <span></span>
-                          <span id="typed-role" class="text-blue-500"></span>
-                          <span class="blinking-cursor">|</span>
+                          <span id="typed-role" class="text-blue-400"></span>
+                          <span class="blinking-cursor text-blue-400">|</span>
                         </h1>
                       
-                        <p class="text-gray-600 text-lg leading-relaxed mt-6 fade-in">
+                        <p class="text-gray-300 text-lg leading-relaxed mt-6 fade-in">
                             Leveraging Python to extract insights from data and engineer intelligent solutions. Passionate about building data-driven applications, automating workflows, and deploying scalable machine learning models that solve real-world problems.
                         </p>
                       </div>
                     
                     <div class="flex gap-4 pt-4">
                         <a href="projects.html" class="gradient-border inline-block btn-hover-effect">
-                            <span class="btn bg-white hover:bg-gray-50 text-gray-900 px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg">
+                            <span class="btn bg-gray-800 hover:bg-gray-700 text-gray-100 px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg hover:shadow-blue-500/30">
                                 View Projects
                             </span>
                         </a>
-                        <a href="contact.html" class="btn bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg btn-hover-effect">
+                        <a href="contact.html" class="btn bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg hover:shadow-blue-500/50 btn-hover-effect">
                             Contact Me
                         </a>
                     </div>
@@ -459,8 +459,8 @@
 
         <!-- Enhanced Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div class="p-2 bg-white/30 backdrop-blur-sm rounded-full">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="p-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-700">
+                <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path class="animate-pulse" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </div>
@@ -474,7 +474,7 @@
         <div class="absolute top-0 left-0 w-full overflow-hidden">
             <svg class="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                    class="fill-gray-50"></path>
+                    class="fill-gray-900"></path>
             </svg>
         </div>
 

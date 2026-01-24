@@ -27,15 +27,15 @@
     <style>
         /* Include all the same styles from index.html */
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.1);
             transition: all 0.3s ease;
         }
         .glass-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+            box-shadow: 0 12px 40px 0 rgba(59, 130, 246, 0.3);
         }
         .project-card {
             position: relative;
@@ -73,8 +73,8 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.15;
-            mix-blend-mode: multiply;
+            opacity: 0.2;
+            mix-blend-mode: screen;
             pointer-events: none;
             transition: all 0.8s ease;
             animation: float 8s ease-in-out infinite;
@@ -136,8 +136,8 @@
         }
         .nav-menu {
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(71, 85, 105, 0.2);
         }
         .cursor-follower {
             pointer-events: none;
@@ -163,13 +163,13 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900">
     <!-- Custom Cursor -->
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-gray-200/50">
+        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-gray-900/90 border-b border-gray-700/50">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="index.html" class="group flex items-center space-x-2 text-2xl font-bold">
                     <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
@@ -181,19 +181,19 @@
                 </a>
 
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Home</a>
-                    <a href="about.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
-                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Experience</a>
-                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Skills</a>
-                    <a href="projects.html" class="nav-link px-3 py-2 text-blue-600">Projects</a>
-                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600">Publications</a>
+                    <a href="index.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Home</a>
+                    <a href="about.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">About</a>
+                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Experience</a>
+                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Skills</a>
+                    <a href="projects.html" class="nav-link px-3 py-2 text-blue-400">Projects</a>
+                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400">Publications</a>
                     <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
                         Contact
                     </a>
                 </div>
 
-                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -201,28 +201,28 @@
 
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
-                    <a href="index.html" class="nav-link text-center">Home</a>
-                    <a href="about.html" class="nav-link text-center">About</a>
-                    <a href="experience.html" class="nav-link">Experience & Education</a>
-                    <a href="skills.html" class="nav-link text-center">Skills</a>
-                    <a href="projects.html" class="nav-link text-center text-blue-600">Projects</a>
-                    <a href="publications.html" class="nav-link text-center">Publications</a>
-                    <a href="contact.html" class="nav-link text-center">Contact</a>
+                    <a href="index.html" class="nav-link text-center text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link text-center text-gray-300">About</a>
+                    <a href="experience.html" class="nav-link text-gray-300">Experience & Education</a>
+                    <a href="skills.html" class="nav-link text-center text-gray-300">Skills</a>
+                    <a href="projects.html" class="nav-link text-center text-blue-400">Projects</a>
+                    <a href="publications.html" class="nav-link text-center text-gray-300">Publications</a>
+                    <a href="contact.html" class="nav-link text-center text-gray-300">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Projects Section -->
-    <section id="projects" class="section-wrapper py-20 bg-gray-50 pt-32">
+    <section id="projects" class="section-wrapper py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 pt-32">
         <div class="bg-blur-effect primary" style="top: 15%; right: 10%;"></div>
         <div class="bg-blur-effect secondary" style="bottom: 20%; left: 15%;"></div>
         <div class="bg-blur-effect accent" style="top: 60%; left: 50%;"></div>
 
         <div class="section-content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold section-title inline-block">Featured Projects</h2>
-                <p class="text-gray-600 mt-8 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold section-title inline-block bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Featured Projects</h2>
+                <p class="text-gray-300 mt-8 max-w-2xl mx-auto">
                     Showcasing innovative solutions and creative development
                 </p>
             </div>
@@ -240,8 +240,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">🤖 Automated Data Cleaning Agent (2025)</h3>
-                        <p class="text-gray-600 mb-4">An intelligent, autonomous data cleaning agent that systematically processes raw datasets through a comprehensive 5-phase workflow, delivering production-ready data for machine learning projects. Features fully automated workflow, ML-optimized preprocessing, comprehensive data quality assessment, and smart validation with quality gates.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">🤖 Automated Data Cleaning Agent (2025)</h3>
+                        <p class="text-gray-300 mb-4">An intelligent, autonomous data cleaning agent that systematically processes raw datasets through a comprehensive 5-phase workflow, delivering production-ready data for machine learning projects. Features fully automated workflow, ML-optimized preprocessing, comprehensive data quality assessment, and smart validation with quality gates.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Pandas</span>
@@ -251,7 +251,7 @@
                             <span class="px-3 py-1 bg-violet-100 text-violet-600 rounded-full text-sm">Seaborn</span>
                         </div>
                         <a href="https://github.com/Keirishan/data-cleaning-agent" target="_blank"
-                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition">
+                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all">
                         <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -268,8 +268,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 End-to-End Data Pipeline with Azure Data Lake and Databricks (2025)</h3>
-                        <p class="text-gray-600 mb-4">Designed and implemented a scalable data pipeline using Azure Data Factory (ADF), Azure Data Lake Gen2, and Azure Databricks for data ingestion, transformation, and storage. Built a multi-layered architecture (Bronze, Silver, Gold) to streamline data processing. Integrated Azure Synapse Analytics for querying and Power BI for reporting and dashboarding. Ensured data security and governance through Azure Active Directory and Key Vault.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 End-to-End Data Pipeline with Azure Data Lake and Databricks (2025)</h3>
+                        <p class="text-gray-300 mb-4">Designed and implemented a scalable data pipeline using Azure Data Factory (ADF), Azure Data Lake Gen2, and Azure Databricks for data ingestion, transformation, and storage. Built a multi-layered architecture (Bronze, Silver, Gold) to streamline data processing. Integrated Azure Synapse Analytics for querying and Power BI for reporting and dashboarding. Ensured data security and governance through Azure Active Directory and Key Vault.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ADF</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Azure data Lake Gen 2</span>
@@ -293,8 +293,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 Automated Job Application Bot (2025)</h3>
-                        <p class="text-gray-600 mb-4">A Python-based automation tool designed to streamline the job application process. Leveraging <strong>Selenium</strong>, it interacts with job portals like LinkedIn to automatically fill out job applications based on user-defined filters.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 Automated Job Application Bot (2025)</h3>
+                        <p class="text-gray-300 mb-4">A Python-based automation tool designed to streamline the job application process. Leveraging <strong>Selenium</strong>, it interacts with job portals like LinkedIn to automatically fill out job applications based on user-defined filters.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Streamlit</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Selenium</span>
@@ -303,7 +303,7 @@
                             <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Pandas</span>
                         </div>
                         <a href="https://github.com/Keirishan/Automated-Job-Application-Bot" target="_blank"
-                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition">
+                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all">
                         <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -321,8 +321,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 ATS Resume Checker (2025)</h3>
-                        <p class="text-gray-600 mb-4">An intelligent tool that evaluates resumes against job descriptions using keyword matching techniques. Built with Python and NLP, it simulates how an Applicant Tracking System (ATS) scores resumes and provides actionable feedback.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 ATS Resume Checker (2025)</h3>
+                        <p class="text-gray-300 mb-4">An intelligent tool that evaluates resumes against job descriptions using keyword matching techniques. Built with Python and NLP, it simulates how an Applicant Tracking System (ATS) scores resumes and provides actionable feedback.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Streamlit</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Python</span>
@@ -332,7 +332,7 @@
                             <span class="px-3 py-1 bg-violet-100 text-violet-600 rounded-full text-sm">Plotly</span>
                         </div>
                         <a href="https://github.com/Keirishan/ATS-Resume-Checker" target="_blank"
-                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition">
+                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all">
                         <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -350,8 +350,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 Alternative Power Monitoring System (APMS) (2024)</h3>
-                        <p class="text-gray-600 mb-4">As an R&D intern at Digital Lab, I developed an IoT-based hybrid energy storage system (APMS) focusing on environmental applications. The system monitored turbine performance and environmental factors. Contributions included designing prototypes, developing firmware, and creating dashboards for real-time data visualization and analysis.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 Alternative Power Monitoring System (APMS) (2024)</h3>
+                        <p class="text-gray-300 mb-4">As an R&D intern at Digital Lab, I developed an IoT-based hybrid energy storage system (APMS) focusing on environmental applications. The system monitored turbine performance and environmental factors. Contributions included designing prototypes, developing firmware, and creating dashboards for real-time data visualization and analysis.</p>
                     </div>
                 </div>
 
@@ -367,8 +367,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 Computer Vision & Deep Learning Based Assistant System for the Visually Impaired (2024)</h3>
-                        <p class="text-gray-600 mb-4">For my final year project, I developed an assistant system for visually impaired individuals using advanced object detection with YOLOv8 and custom-trained models. Tasks included creating and annotating datasets for pedestrian crossings, pathways, objects, and traffic lights. The project included a web application enabling guardians to monitor users via live camera feeds, location tracking, and messaging capabilities.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 Computer Vision & Deep Learning Based Assistant System for the Visually Impaired (2024)</h3>
+                        <p class="text-gray-300 mb-4">For my final year project, I developed an assistant system for visually impaired individuals using advanced object detection with YOLOv8 and custom-trained models. Tasks included creating and annotating datasets for pedestrian crossings, pathways, objects, and traffic lights. The project included a web application enabling guardians to monitor users via live camera feeds, location tracking, and messaging capabilities.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">YOLOV8</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Python</span>
@@ -377,7 +377,7 @@
                             <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">MicroPython</span>
                         </div>
                         <a href="https://github.com/Keirishan/WaySparkFinder-WSF" target="_blank"
-                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition">
+                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all">
                         <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -395,8 +395,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 Remote Monitoring of Coke Cans in a Fridge with Real-time Updates (2023)</h3>
-                        <p class="text-gray-600 mb-4">Developed a prototype IoT system to monitor the temperature and availability of Coca-Cola cans in real time. Used sensors to gather data and implemented the MQTT protocol for communication between the device and a smartphone application. The system provided real-time updates for accurate monitoring and timely alerts.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 Remote Monitoring of Coke Cans in a Fridge with Real-time Updates (2023)</h3>
+                        <p class="text-gray-300 mb-4">Developed a prototype IoT system to monitor the temperature and availability of Coca-Cola cans in real time. Used sensors to gather data and implemented the MQTT protocol for communication between the device and a smartphone application. The system provided real-time updates for accurate monitoring and timely alerts.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">ESP32</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">MicroPython</span>
@@ -405,7 +405,7 @@
                             <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">NodeRed</span>
                         </div>
                         <a href="https://github.com/Keirishan/Remote-Monitoring-of-Coke-Cans-in-a-vending-machine-with-Real-time-Updates" target="_blank"
-                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition">
+                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all">
                         <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -423,14 +423,14 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 Pharmacy Management and Billing System (2022)</h3>
-                        <p class="text-gray-600 mb-4">Developed a pharmacy management application aimed at efficiently managing inventory and generating purchase invoices. Streamlined inventory tracking, automated stock updates, and simplified invoice generation for better operational efficiency.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 Pharmacy Management and Billing System (2022)</h3>
+                        <p class="text-gray-300 mb-4">Developed a pharmacy management application aimed at efficiently managing inventory and generating purchase invoices. Streamlined inventory tracking, automated stock updates, and simplified invoice generation for better operational efficiency.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Netbeans</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Java</span>
                         </div>
                         <a href="https://github.com/Keirishan/Pharmacy-Management-and-Billing-System" target="_blank"
-                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition">
+                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all">
                         <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -448,15 +448,15 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">💼 RFID-Based Smart Door Control System (2022)</h3>
-                        <p class="text-gray-600 mb-4">Designed and implemented an RFID-based access control system to enhance security and responsiveness. The system used RFID cards for authorized access and sent notifications to administrators in case of unauthorized attempts. Demonstrated expertise in embedded systems, security protocols, and real-time alert mechanisms.</p>
+                        <h3 class="text-xl font-bold mb-2 text-gray-100">💼 RFID-Based Smart Door Control System (2022)</h3>
+                        <p class="text-gray-300 mb-4">Designed and implemented an RFID-based access control system to enhance security and responsiveness. The system used RFID cards for authorized access and sent notifications to administrators in case of unauthorized attempts. Demonstrated expertise in embedded systems, security protocols, and real-time alert mechanisms.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Arduino</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">C++</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">EasyEDA</span>
                         </div>
                         <a href="https://github.com/Keirishan/RFID-Based-Smart-Door-Control-System" target="_blank"
-                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition">
+                        class="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-all">
                         <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -470,7 +470,7 @@
         <div class="absolute top-0 left-0 w-full overflow-hidden">
             <svg class="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                    class="fill-gray-50"></path>
+                    class="fill-gray-900"></path>
             </svg>
         </div>
 

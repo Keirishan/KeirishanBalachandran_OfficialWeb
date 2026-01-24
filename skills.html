@@ -52,12 +52,12 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(71, 85, 105, 0.3);
             box-shadow: 
-                0 8px 32px 0 rgba(31, 38, 135, 0.1),
-                0 4px 8px rgba(0, 0, 0, 0.05);
+                0 8px 32px 0 rgba(59, 130, 246, 0.1),
+                0 4px 8px rgba(0, 0, 0, 0.3);
             transform-style: preserve-3d;
             transition: all 0.3s ease;
         }
@@ -65,8 +65,8 @@
         .glass-card:hover {
             transform: translateY(-5px) rotateX(2deg) rotateY(2deg);
             box-shadow: 
-                0 12px 40px 0 rgba(31, 38, 135, 0.15),
-                0 8px 16px rgba(0, 0, 0, 0.07);
+                0 12px 40px 0 rgba(59, 130, 246, 0.3),
+                0 8px 16px rgba(59, 130, 246, 0.2);
         }
 
         .skill-card {
@@ -282,7 +282,7 @@
         }
 
         .wave-transition .shape-fill {
-            fill: #ffffff;
+            fill: #1e293b;
         }
 
         /* Adjust section positioning */
@@ -293,7 +293,7 @@
 
         #projects {
             margin-top: -1px;
-            background-color: #ffffff;
+            background-color: #1e293b;
         }
 
         #contact {
@@ -327,8 +327,8 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.15;
-            mix-blend-mode: multiply;
+            opacity: 0.2;
+            mix-blend-mode: screen;
             pointer-events: none;
             transition: all 0.8s ease;
             animation: float 8s ease-in-out infinite;
@@ -385,10 +385,10 @@
 
         /* Enhanced Glass Effect */
         .glass-card {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         /* Enhanced Animations */
@@ -416,10 +416,10 @@
         }
 
         .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(30, 41, 59, 0.3);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         /* Enhanced Button Styles */
@@ -512,8 +512,8 @@
 
         .nav-menu {
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(71, 85, 105, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -551,13 +551,13 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900">
     <!-- Custom Cursor -->
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-gray-200/50">
+        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-gray-900/90 border-b border-gray-700/50">
             <div class="container mx-auto flex justify-between items-center">
                 <!-- Logo with enhanced gradient and animation -->
                 <a href="index.html" class="group flex items-center space-x-2 text-2xl font-bold">
@@ -571,29 +571,29 @@
 
                 <!-- Desktop Menu with enhanced hover effects -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="index.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Home</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="about.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="about.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>About</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Experience</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="skills.html" class="nav-link px-3 py-2 text-blue-600 relative group">
+                    <a href="skills.html" class="nav-link px-3 py-2 text-blue-400 relative group">
                         <span>Skills</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Projects</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-600 hover:text-blue-600 relative group">
+                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
                         <span>Publications</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
                         Contact
@@ -601,8 +601,8 @@
                 </div>
 
                 <!-- Enhanced Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -611,13 +611,13 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
-                    <a href="index.html" class="nav-link text-center">Home</a>
-                    <a href="about.html" class="nav-link text-center">About</a>
-                    <a href="experience.html" class="nav-link">Experience & Education</a>
-                    <a href="skills.html" class="nav-link text-center text-blue-600">Skills</a>
-                    <a href="projects.html" class="nav-link text-center">Projects</a>
-                    <a href="publications.html" class="nav-link text-center">Publications</a>
-                    <a href="contact.html" class="nav-link text-center">Contact</a>
+                    <a href="index.html" class="nav-link text-center text-gray-300">Home</a>
+                    <a href="about.html" class="nav-link text-center text-gray-300">About</a>
+                    <a href="experience.html" class="nav-link text-gray-300">Experience & Education</a>
+                    <a href="skills.html" class="nav-link text-center text-blue-400">Skills</a>
+                    <a href="projects.html" class="nav-link text-center text-gray-300">Projects</a>
+                    <a href="publications.html" class="nav-link text-center text-gray-300">Publications</a>
+                    <a href="contact.html" class="nav-link text-center text-gray-300">Contact</a>
                 </div>
             </div>
         </div>
@@ -664,7 +664,7 @@
     </script>
 
     <!-- Skills Section with Background Effects -->
-    <section id="skills" class="section-wrapper py-20 bg-gray-50 pt-32">
+    <section id="skills" class="section-wrapper py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 pt-32">
         <!-- Background Blur Effects -->
         <div class="bg-blur-effect primary" style="top: 20%; left: 10%;"></div>
         <div class="bg-blur-effect secondary" style="top: 50%; right: 15%;"></div>
@@ -672,8 +672,8 @@
 
         <div class="section-content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-center">Skills & Expertise</h2>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold text-center bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Skills & Expertise</h2>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
                     A comprehensive overview of my technical skills and areas of expertise
                 </p>
             </div>
@@ -682,147 +682,147 @@
                 <!-- Frontend Development -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-code text-3xl text-blue-500"></i>
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-code text-3xl text-blue-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800">Programming Languages</h3>
+                            <h3 class="text-xl font-bold text-gray-100">Programming Languages</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">C/C++</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HTML5</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">C/C++</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">HTML5</span>
                     </div>
                 </div>
 
                 <!-- ETL Tools -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-cogs text-3xl text-amber-600"></i>
+                        <div class="w-16 h-16 bg-amber-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cogs text-3xl text-amber-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800">ETL Tool</h3>
+                        <h3 class="text-xl font-bold text-gray-100">ETL Tool</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-amber-100 text-amber-600 rounded-full text-sm">Apache Airflow</span>
-                        <span class="px-3 py-1 bg-amber-100 text-amber-600 rounded-full text-sm">Snowflake</span>
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-sm">Apache Airflow</span>
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-sm">Snowflake</span>
                     </div>
                 </div>
 
                 <!-- Database & Cloud -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-database text-3xl text-purple-500"></i>
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-database text-3xl text-purple-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800">Database & Cloud</h3>
+                        <h3 class="text-xl font-bold text-gray-100">Database & Cloud</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MySQL</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MongoDB</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">MySQL</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Azure</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">AWS</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">GCP</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Firebase</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">MongoDB</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Azure</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">AWS</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">GCP</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Firebase</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Docker</span>
                     </div>
                 </div>
                 <!-- Big Data Technologies -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-network-wired text-3xl text-orange-500"></i>
+                        <div class="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-network-wired text-3xl text-orange-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800">Big Data Technologies</h3>
+                        <h3 class="text-xl font-bold text-gray-100">Big Data Technologies</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-purple-100 text-orange-600 rounded-full text-sm">Hadoop</span>
-                        <span class="px-3 py-1 bg-purple-100 text-orange-600 rounded-full text-sm">Spark</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Hadoop</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Spark</span>
                     </div>
                 </div>
                 <!-- Visualization Tools -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-chart-pie text-3xl text-pink-500"></i>
+                        <div class="w-16 h-16 bg-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-pie text-3xl text-pink-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-pink-800">Visualization Tools</h3>
+                        <h3 class="text-xl font-bold text-gray-100">Visualization Tools</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-purple-100 text-pink-600 rounded-full text-sm">Power BI</span>
-                        <span class="px-3 py-1 bg-purple-100 text-pink-600 rounded-full text-sm">Tableau</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Power BI</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Tableau</span>
                     </div>
                 </div>
                 <!-- OS -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fab fa-linux text-3xl text-gray-800"></i>
+                        <div class="w-16 h-16 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-linux text-3xl text-orange-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800">Operating Systems</h3>
+                        <h3 class="text-xl font-bold text-gray-100">Operating Systems</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-gray-100 text-orange-600 rounded-full text-sm">Windows</span>
-                        <span class="px-3 py-1 bg-gray-100 text-orange-600 rounded-full text-sm">Linux</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Windows</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Linux</span>
                     </div>
                 </div>
                 <!-- PCB Designing Tool -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-project-diagram text-3xl text-green-600"></i>
+                        <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-project-diagram text-3xl text-green-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-green-800">PCB Designing Tools</h3>
+                        <h3 class="text-xl font-bold text-gray-100">PCB Designing Tools</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-purple-100 text-green-600 rounded-full text-sm">EasyEDA</span>
-                        <span class="px-3 py-1 bg-purple-100 text-green-600 rounded-full text-sm">KiCad</span>
-                        <span class="px-3 py-1 bg-purple-100 text-green-600 rounded-full text-sm">Altium</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">EasyEDA</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">KiCad</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Altium</span>
                     </div>
                 </div>
                 <!-- Hardware -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-microchip text-3xl text-blue-500"></i>
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-microchip text-3xl text-blue-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-blue-800">Hardware</h3>
+                        <h3 class="text-xl font-bold text-gray-100">Hardware</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">PIC</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Arduino</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">NodeMCU</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Raspberry Pi</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">PIC</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Arduino</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">NodeMCU</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Raspberry Pi</span>
                     </div>
                 </div>
 
                 <!-- Tools & Others -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-tools text-3xl text-pink-500"></i>
+                        <div class="w-16 h-16 bg-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-3xl text-pink-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800">Tools & Others</h3>
+                        <h3 class="text-xl font-bold text-gray-100">Tools & Others</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Git</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">github</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">CI/CD</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">github</span>
+                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">CI/CD</span>
                     </div>
                 </div>
 
                 <!-- AI & Prompt Engineering -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-robot text-3xl text-indigo-500"></i>
+                        <div class="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-robot text-3xl text-indigo-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-indigo-800">AI & Prompt Engineering</h3>
+                        <h3 class="text-xl font-bold text-gray-100">AI & Prompt Engineering</h3>
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Prompt Engineering</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">Prompt Engineering</span>
                         <!-- <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">LLM Optimization</span> -->
-                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">AI Integration</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">AI Integration</span>
                     </div>
                 </div>
             </div>
@@ -835,7 +835,7 @@
         <div class="absolute top-0 left-0 w-full overflow-hidden">
             <svg class="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                    class="fill-gray-50"></path>
+                    class="fill-gray-900"></path>
             </svg>
         </div>
 
