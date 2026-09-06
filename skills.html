@@ -44,6 +44,7 @@
             border-radius: 9999px;
             padding: 2px;
             background: linear-gradient(45deg, #3B82F6, #60A5FA, #93C5FD);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask: 
                 linear-gradient(#fff 0 0) content-box, 
                 linear-gradient(#fff 0 0);
@@ -584,7 +585,7 @@
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="skills.html" class="nav-link px-3 py-2 text-blue-400 relative group">
-                        <span>Skills</span>
+                        <span>Skills and Certification</span>
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="projects.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
@@ -614,7 +615,7 @@
                     <a href="index.html" class="nav-link text-center text-gray-300">Home</a>
                     <a href="about.html" class="nav-link text-center text-gray-300">About</a>
                     <a href="experience.html" class="nav-link text-gray-300">Experience & Education</a>
-                    <a href="skills.html" class="nav-link text-center text-blue-400">Skills</a>
+                    <a href="skills.html" class="nav-link text-center text-blue-400">Skills and Certification</a>
                     <a href="projects.html" class="nav-link text-center text-gray-300">Projects</a>
                     <a href="publications.html" class="nav-link text-center text-gray-300">Publications</a>
                     <a href="contact.html" class="nav-link text-center text-gray-300">Contact</a>
@@ -674,11 +675,86 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-center bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Skills & Expertise</h2>
                 <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
-                    A comprehensive overview of my technical skills and areas of expertise
+                    A focused overview of my technical skills, with emphasis on Agentic AI and modern AI systems
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Agentic AI -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-blue-400/20">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-3xl text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-100">Agentic AI</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Autonomous Agents</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Tool Use</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Planning & Reasoning</span>
+                    </div>
+                </div>
+
+                <!-- Multi-Agent Systems -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-sitemap text-3xl text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-100">Multi-Agent Systems</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">Orchestration</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">Collaboration Patterns</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">Task Delegation</span>
+                    </div>
+                </div>
+
+                <!-- Retrieval-Augmented Generation -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-search text-3xl text-emerald-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-100">RAG Systems</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm">Retrieval-Augmented Generation</span>
+                        <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm">Context Grounding</span>
+                        <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm">Prompt Routing</span>
+                    </div>
+                </div>
+
+                <!-- Vector Databases -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-violet-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-vector-square text-3xl text-violet-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-100">Vector Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-violet-500/20 text-violet-300 rounded-full text-sm">Semantic Search</span>
+                        <span class="px-3 py-1 bg-violet-500/20 text-violet-300 rounded-full text-sm">Embeddings</span>
+                        <span class="px-3 py-1 bg-violet-500/20 text-violet-300 rounded-full text-sm">Similarity Retrieval</span>
+                    </div>
+                </div>
+
+                <!-- Multi-Agent Architectures -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-project-diagram text-3xl text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-100">Agent Workflows</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Multi-Agent Architectures</span>
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Workflow Design</span>
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Automation Pipelines</span>
+                    </div>
+                </div>
+
                 <!-- Frontend Development -->
                 <div class="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div class="text-center mb-6">
@@ -821,8 +897,55 @@
                     </div>
                     <div class="flex flex-wrap gap-2 justify-center">
                         <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">Prompt Engineering</span>
-                        <!-- <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">LLM Optimization</span> -->
                         <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">AI Integration</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">LLM Workflows</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <div class="text-center mb-10">
+                    <h3 class="text-3xl font-bold text-center bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Certifications</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto justify-items-center">
+                    <div class="glass-card p-6 rounded-xl border border-blue-400/20 w-full max-w-xl text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 h-24 rounded-2xl bg-blue-500/10 flex items-center justify-center shrink-0 mb-5">
+                                <img src="img/badge/claude-certified-architect-foundations.png" alt="Claude Certified Architect - Foundations badge" class="w-20 h-20 object-contain">
+                            </div>
+                            <div class="w-full">
+                                <h4 class="text-xl font-bold text-gray-100">Claude Certified Architect - Foundations</h4>
+                                <p class="text-gray-300 text-sm mt-2">Anthropic</p>
+                                <div class="mt-4 space-y-2 text-sm text-gray-400">
+                                    <p>Issue Date: <span class="text-gray-200">Sep 2026</span></p>
+                                </div>
+                                <a href="https://www.credly.com/badges/62e671e0-d7f8-4846-a561-b3838c26d10c/linked_in_profile" class="mt-5 inline-flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Verify Credential
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl border border-indigo-400/20 w-full max-w-xl text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 h-24 rounded-2xl bg-indigo-500/10 flex items-center justify-center shrink-0 mb-5">
+                                <img src="img/badge/microsoft-certified-fundamentals-badge.png" alt="Microsoft Certified: Azure Data Fundamentals badge" class="w-20 h-20 object-contain">
+                            </div>
+                            <div class="w-full">
+                                <h4 class="text-xl font-bold text-gray-100">Microsoft Certified: Azure Data Fundamentals</h4>
+                                <p class="text-gray-300 text-sm mt-2">Microsoft</p>
+                                <div class="mt-4 space-y-2 text-sm text-gray-400">
+                                    <p>Issue Date: <span class="text-gray-200">July 2025</span></p>
+                                    <p>Credential ID: <span class="text-gray-200">F7DF7BCC65CB7DF</span></p>
+                                </div>
+                                <a href="https://learn.microsoft.com/api/credentials/share/en-us/BalachandranKeirishan-0814/F7DF7BCC65CB7DF?sharingId" class="mt-5 inline-flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Verify Credential
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -876,7 +999,7 @@
                     <div class="flex flex-col space-y-3">
                         <a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">About</a>
                         <a href="experience.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Experience</a>
-                        <a href="skills.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Skills</a>
+                        <a href="skills.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Skills and Certification</a>
                         <a href="projects.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Projects</a>
                         <a href="publications.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Publications</a>
                     </div>
