@@ -1,686 +1,748 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keirishan Portfolio</title>
-    <link href="img/Title.png" rel="icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3B82F6',
-                        secondary: '#1E293B',
-                    },
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Previous cursor styles remain... */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keirishan Balachandran | AI &amp; Data Engineer</title>
+  <meta name="description" content="Keirishan Balachandran is a Software Engineer specializing in AI Engineering, Agentic AI and Data Engineering, pursuing an MSc in Data Science Engineering & Analytics at the University of Moratuwa.">
+  <meta name="author" content="Keirishan Balachandran">
+  <meta name="theme-color" content="#0B1120">
 
-        .gradient-border {
-            position: relative;
-            background: linear-gradient(to right, #3B82F6, #60A5FA);
-            padding: 1px;
-            border-radius: 9999px;
-        }
+  <!-- Open Graph / social preview. Replace SITE_URL if the site moves to a custom domain. -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Keirishan Balachandran | AI & Data Engineer">
+  <meta property="og:description" content="Software Engineer building LLM applications, agentic systems and data pipelines. MSc Data Science (in progress), University of Moratuwa.">
+  <meta property="og:url" content="https://keirishan.github.io/KeirishanBalachandran_OfficialWeb/">
+  <meta property="og:image" content="https://keirishan.github.io/KeirishanBalachandran_OfficialWeb/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://keirishan.github.io/KeirishanBalachandran_OfficialWeb/">
 
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 9999px;
-            padding: 2px;
-            background: linear-gradient(45deg, #3B82F6, #60A5FA, #93C5FD);
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) content-box, 
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-        .glass-card {
-            background: rgba(30, 41, 59, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(71, 85, 105, 0.3);
-            box-shadow: 
-                0 8px 32px 0 rgba(0, 0, 0, 0.3),
-                0 4px 8px rgba(0, 0, 0, 0.2);
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 
-        .glass-card:hover {
-            transform: translateY(-5px) rotateX(2deg) rotateY(2deg);
-            box-shadow: 
-                0 12px 40px 0 rgba(59, 130, 246, 0.2),
-                0 8px 16px rgba(0, 0, 0, 0.3);
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Keirishan Balachandran",
+    "jobTitle": "Software Engineer, AI & Data Engineering",
+    "worksFor": { "@type": "Organization", "name": "LOWCODEMINDS" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Moratuwa" },
+      { "@type": "CollegeOrUniversity", "name": "Sri Lanka Technology Campus" }
+    ],
+    "address": { "@type": "PostalAddress", "addressCountry": "LK" },
+    "email": "mailto:keirishanb@outlook.com",
+    "image": "https://keirishan.github.io/KeirishanBalachandran_OfficialWeb/img/keirish-portrait.jpg",
+    "sameAs": [
+      "https://github.com/Keirishan",
+      "https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/",
+      "https://medium.com/@keirish15"
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Agentic AI", "Multi-Agent Systems", "Retrieval-Augmented Generation", "Data Engineering", "Machine Learning", "Data Science", "Python", "SQL", "Microsoft Fabric"]
+  }
+  </script>
+  <script>
+    /* Decide before first paint: play intro once per session, never for reduced motion */
+    (function (h) {
+      h.classList.remove('no-js');
+      h.classList.add('js-enter');
+      try {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // play the intro on every load (including refresh); only reduced-motion users skip it
+        if (!reduce) {
+          h.classList.add('intro-on');
+          // start at the top so the intro opens onto the hero (keep deep links like #projects)
+          if (!location.hash && 'scrollRestoration' in history) history.scrollRestoration = 'manual';
         }
-
-        .btn-hover-effect {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .btn-hover-effect:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transform: translateX(-100%);
-            transition: 0.6s;
-        }
-
-        .btn-hover-effect:hover:before {
-            transform: translateX(100%);
-        }
-
-        .code-editor {
-            position: relative;
-            border-radius: 1rem;
-            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .code-editor:before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #3b82f6, #2563eb, #1d4ed8);
-            border-radius: 1.1rem;
-            z-index: -1;
-            opacity: 0.5;
-        }
-
-        /* Add smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom cursor styles */
-        .cursor-dot, .cursor-dot-outline {
-            pointer-events: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            border-radius: 50%;
-            opacity: 0;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-            z-index: 9999;
-        }
-
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #3b82f6;
-        }
-
-        .cursor-dot-outline {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(59, 130, 246, 0.1);
-            border: 2px solid rgba(59, 130, 246, 0.5);
-        }
-
-        /* Hide cursor on touch devices */
-        @media (hover: none) and (pointer: coarse) {
-            .cursor-dot, .cursor-dot-outline {
-                display: none;
-            }
-        }
-
-        /* Background Effects */
-        .bg-blur-effect {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.2;
-            mix-blend-mode: screen;
-            pointer-events: none;
-            transition: all 0.8s ease;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .bg-blur-effect.primary {
-            background: rgb(59, 130, 246);
-            width: 400px;
-            height: 400px;
-        }
-
-        .bg-blur-effect.secondary {
-            background: rgb(139, 92, 246);
-            width: 350px;
-            height: 350px;
-            animation-delay: -2s;
-        }
-
-        .bg-blur-effect.accent {
-            background: rgb(236, 72, 153);
-            width: 300px;
-            height: 300px;
-            animation-delay: -4s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(50px, -50px) scale(1.1); }
-            50% { transform: translate(-30px, 30px) scale(0.9); }
-            75% { transform: translate(40px, 40px) scale(1.05); }
-        }
-
-        /* Header Menu Styles */
-        .nav-link {
-            position: relative;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 50%;
-            background: linear-gradient(90deg, #3b82f6, #2563eb);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .nav-link:hover::after {
-            width: 70%;
-        }
-
-        .nav-link:hover {
-            color: #3b82f6;
-        }
-
-        .nav-menu {
-            backdrop-filter: blur(10px);
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(71, 85, 105, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                background: rgba(15, 23, 42, 0.95);
-            }
-        }
-
-        /* Cursor follower */
-        .cursor-follower {
-            pointer-events: none;
-            position: fixed;
-            width: 30px;
-            height: 30px;
-            border: 2px solid #3b82f6;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.15s ease;
-            z-index: 9999;
-            opacity: 0.7;
-        }
-
-        /* Hide on mobile/touch devices */
-        @media (hover: none) and (pointer: coarse) {
-            .cursor-follower {
-                display: none;
-            }
-        }
-
-        /* Interactive element hover effect */
-        .cursor-follower.hover {
-            transform: translate(-50%, -50%) scale(1.5);
-            background-color: rgba(59, 130, 246, 0.1);
-            border-color: #2563eb;
-        }
-
-        /* Blinking Cursor Style */
-        .blinking-cursor {
-            font-weight: bold;
-            font-size: 2rem;
-            animation: blink 0.8s infinite;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-    </style>
+      } catch (e) { /* matchMedia unavailable: skip intro */ }
+      // failsafe: if main.js never runs, unlock the page and show the hero anyway
+      setTimeout(function () { h.classList.remove('intro-on'); h.classList.add('entered'); }, 12000);
+    })(document.documentElement);
+  </script>
 </head>
-<body class="bg-gray-900">
-    <!-- Custom Cursor -->
-    <div class="cursor-follower"></div>
+<body>
+  <!-- ================= INTRO (first visit) ================= -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__half intro__half--l"></div>
+    <div class="intro__half intro__half--r"></div>
+    <div class="intro__seam"></div>
+    <canvas class="intro__graph"></canvas>
+    <div class="intro__core">
+      <div class="intro__mark">KB</div>
+      <div class="intro__name">Keirishan Balachandran</div>
+      <div class="intro__role" aria-label="Data Science, AI Engineering, Forward Deployed Engineering"><span class="intro__prompt" aria-hidden="true">&gt;</span><span class="intro__type t-data" aria-hidden="true"></span><span class="intro__caret" aria-hidden="true"></span></div>
+      <ol class="intro__log"></ol>
+      <div class="intro__meter">
+        <div class="intro__bar"><span></span></div>
+        <span class="intro__pct">0%</span>
+      </div>
+    </div>
+    <button class="intro__skip" type="button" tabindex="-1">Skip intro</button>
+  </div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="nav-menu px-4 py-3 mx-auto transition-all duration-300 backdrop-blur-lg bg-gray-900/90 border-b border-gray-700/50">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Logo with enhanced gradient and animation -->
-                <a href="#" class="group flex items-center space-x-2 text-2xl font-bold">
-                    <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent bg-size-200 hover:bg-pos-100 transition-all duration-500">
-                        Keirishan
-                    </span>
-                    <span class="text-gray-400 group-hover:text-blue-400 transition-colors duration-300">
-                        .ai
-                    </span>
-                </a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-                <!-- Desktop Menu with enhanced hover effects -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link px-3 py-2 text-blue-400 relative group">
-                        <span>Home</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-100 transition-transform duration-300"></span>
-                    </a>
-                    <a href="about.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
-                        <span>About</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </a>
-                    <a href="experience.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
-                        <span>Experience & Education</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </a>
-                    <a href="skills.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
-                        <span>Skills and Certification</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </a>
-                    <a href="projects.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
-                        <span>Projects</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </a>
-                    <a href="publications.html" class="nav-link px-3 py-2 text-gray-300 hover:text-blue-400 relative group">
-                        <span>Publications</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </a>
-                    <a href="contact.html" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-0.5 transition-all duration-300">
-                        Contact
-                    </a>
-                </div>
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Keirishan Balachandran, home">
+        <span class="brand__mark">KB</span>
+        <span>Keirishan Balachandran</span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li class="nav__cta"><a href="#contact" class="btn btn--primary btn--sm">Get in touch</a></li>
+      </ul>
+    </div>
+  </header>
 
-                <!-- Enhanced Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="pill" data-enter style="--d:0"><span class="live-dot" aria-hidden="true"></span> Sri Lanka</span>
+            <!-- <p class="eyebrow" data-enter style="--d:1">Software Engineer · <span class="t-ai">AI</span> &amp; <span class="t-data">Data</span> Engineering</p> -->
+            <p class="hero__name" data-enter style="--d:2">Hi, I'm <strong>Keirishan Balachandran</strong></p>
+            <h1 class="hero__title" data-enter style="--d:3">Building intelligent, <span>data-driven</span> systems.</h1>
+            <p class="hero__sub" data-enter style="--d:4">
+              I adopt an AI-first engineering mindset, combining independent problem-solving, technical expertise, and human judgment to strategically guide, refine, and validate AI-driven outcomes. I leverage AI effectively and responsibly through a human-in-the-loop approach and Specification-Driven Development (SDD).
+              I build multi-agent AI systems, AI-powered automation solutions, scalable data engineering pipelines, and Python backend services.
+              My goal is to advance my career as a Forward Deployed Engineer with a strong foundation in data science, combining AI engineering, data science, and data engineering to deliver reliable, scalable, and production-ready solutions.
+            </p>
+            <div class="hero__actions" data-enter style="--d:5">
+              <a href="projects.html" class="btn btn--primary">View projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="#contact" class="btn btn--ghost">Get in touch</a>
+              <div class="hero__social">
+                <a class="icon-link" href="https://github.com/Keirishan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a class="icon-link" href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a class="icon-link" href="https://medium.com/@keirish15" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+              </div>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="flex flex-col space-y-4 pt-4 pb-3 px-2">
-                    <a href="index.html" class="nav-link text-center text-blue-400">Home</a>
-                    <a href="about.html" class="nav-link text-center text-gray-300">About</a>
-                    <a href="experience.html" class="nav-link text-gray-300">Experience & Education</a>
-                    <a href="skills.html" class="nav-link text-center text-gray-300">Skills and Certification</a>
-                    <a href="projects.html" class="nav-link text-center text-gray-300">Projects</a>
-                    <a href="publications.html" class="nav-link text-center text-gray-300">Publications</a>
-                    <a href="contact.html" class="nav-link text-center text-gray-300">Contact</a>
-                </div>
+          </div>
+          <div class="hero__photo">
+            <div class="photo-ring" data-enter="photo" style="--d:2">
+              <img src="img/keirish-portrait.jpg" width="760" height="760" alt="Portrait of Keirishan Balachandran">
             </div>
-        </div>
-    </nav>
-
-    <script>
-        // Header Scroll Effect
-        const header = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-lg');
-                header.querySelector('.nav-menu').classList.add('py-2');
-                header.querySelector('.nav-menu').classList.remove('py-3');
-            } else {
-                header.classList.remove('shadow-lg');
-                header.querySelector('.nav-menu').classList.remove('py-2');
-                header.querySelector('.nav-menu').classList.add('py-3');
-            }
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = mobileMenuButton.querySelector('.mobile-menu-icon');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-            } else {
-                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-            }
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.querySelector('.mobile-menu-icon').setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                }
-            });
-        });
-    </script>
-
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 pt-10 md:pt-0">
-        <!-- Enhanced Background Elements -->
-        <div class="absolute inset-0">
-            <div class="bg-blur-effect primary top-10 left-20 animate-pulse"></div>
-            <div class="bg-blur-effect secondary bottom-10 right-20 animate-float"></div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="container mx-auto px-4 z-10">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <!-- Left Content -->
-                <div class="lg:w-1/2 space-y-8 stagger-fade-in">
-                    <div class="space-y-4 text-center">
-                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 text-transparent bg-clip-text leading-tight py-5 hover:scale-105 transition-transform duration-300">
-                          <span></span>
-                          <span id="typed-role" class="text-blue-400"></span>
-                          <span class="blinking-cursor text-blue-400">|</span>
-                        </h1>
-                      
-                        <p class="text-gray-300 text-lg leading-relaxed mt-6 fade-in">
-                            Leveraging Python to extract insights from data and engineer intelligent solutions. Passionate about building data-driven applications, automating workflows, and deploying scalable machine learning models that solve real-world problems.
-                        </p>
-                      </div>
-                    
-                    <div class="flex gap-4 pt-4">
-                        <a href="projects.html" class="gradient-border inline-block btn-hover-effect">
-                            <span class="btn bg-gray-800 hover:bg-gray-700 text-gray-100 px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg hover:shadow-blue-500/30">
-                                View Projects
-                            </span>
-                        </a>
-                        <a href="contact.html" class="btn bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block transition-all hover:shadow-lg hover:shadow-blue-500/50 btn-hover-effect">
-                            Contact Me
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Content - Enhanced Code Preview -->
-                <div class="lg:w-1/2 float-animation w-full">
-                    <div class="code-editor p-6 rounded-2xl shadow-xl bg-gray-900/95 backdrop-blur-xl hover:scale-105 transition-transform duration-300">
-                        <!-- Code Editor Header -->
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500 hover:opacity-80 transition-opacity"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500 hover:opacity-80 transition-opacity"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500 hover:opacity-80 transition-opacity"></div>
-                            </div>
-                            <div class="text-gray-400 text-sm px-3 py-1 rounded-md bg-gray-800/50">developer.py</div>
-                        </div>
-                        <!-- Code Content -->
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">class</span> <span class="text-blue-400">PythonDeveloper</span><span class="text-gray-400">:</span></code></pre>
-
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">__init__</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.name</span> <span class="text-gray-400">=</span> <span class="text-orange-300">"Keirishan"</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.title</span> <span class="text-gray-400">=</span> <span class="text-orange-300">"Data Scientist"</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.skills</span> <span class="text-gray-400">=</span> <span class="text-yellow-300">[</span><span class="text-orange-300">"Python"</span><span class="text-gray-400">,</span> <span class="text-orange-300">"Data Science"</span><span class="text-gray-400">,</span> <span class="text-orange-300">"Embedded Systems"</span><span class="text-yellow-300">]</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.passion</span> <span class="text-gray-400">=</span> <span class="text-orange-300">"Crafting Intelligent Data Pipelines"</span></code></pre>
-
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">code</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.eat()</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.sleep()</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.code()</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code>    <span class="text-green-400">self.repeat()</span></code></pre>
-
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">eat</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">sleep</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">code</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-                        <pre class="text-sm font-mono overflow-x-auto"><code><span class="text-purple-400">def</span> <span class="text-blue-400">repeat</span><span class="text-gray-400">(</span><span class="text-blue-400">self</span><span class="text-gray-400">)</span><span class="text-gray-400">:</span> <span class="text-purple-400">pass</span></code></pre>
-
-                    </div>
-                </div>
+            <div class="trace" aria-hidden="true" data-enter style="--d:6">
+              <div class="trace__head"><span class="live-dot"></span> agent.run()<span class="trace__status">live</span></div>
+              <ol class="trace__log"></ol>
             </div>
+          </div>
         </div>
-
-        <!-- Enhanced Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div class="p-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-700">
-                <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path class="animate-pulse" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
-            </div>
-        </div>
+      </div>
     </section>
 
+    <!-- ================= TECH TICKER ================= -->
+    <div class="ticker" aria-label="Technologies I work with">
+      <ul class="ticker__track">
+        <li class="ai"><i class="fa-solid fa-robot" aria-hidden="true"></i>Agentic AI</li>
+        <li class="ai"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Multi-Agent Systems</li>
+        <li class="ai"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>RAG</li>
+        <li class="ai"><i class="fa-solid fa-brain" aria-hidden="true"></i>LLMs · Claude</li>
+        <li><i class="fab fa-python" aria-hidden="true"></i>Python</li>
+        <li><i class="fa-solid fa-database" aria-hidden="true"></i>SQL</li>
+        <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Microsoft Fabric</li>
+        <li><i class="fa-solid fa-wind" aria-hidden="true"></i>Apache Airflow</li>
+        <li><i class="fa-solid fa-snowflake" aria-hidden="true"></i>Snowflake</li>
+        <li><i class="fa-solid fa-fire" aria-hidden="true"></i>Spark</li>
+        <li><i class="fa-brands fa-microsoft" aria-hidden="true"></i>Azure Data Factory</li>
+        <li><i class="fa-solid fa-chart-line" aria-hidden="true"></i>scikit-learn</li>
+        <li><i class="fa-solid fa-bolt" aria-hidden="true"></i>FastAPI</li>
+        <li><i class="fa-brands fa-docker" aria-hidden="true"></i>Docker</li>
+        <li><i class="fa-solid fa-chart-pie" aria-hidden="true"></i>Power BI</li>
+        <!-- duplicate set for seamless loop -->
+        <li class="ai" aria-hidden="true"><i class="fa-solid fa-robot"></i>Agentic AI</li>
+        <li class="ai" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i>Multi-Agent Systems</li>
+        <li class="ai" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"></i>RAG</li>
+        <li class="ai" aria-hidden="true"><i class="fa-solid fa-brain"></i>LLMs · Claude</li>
+        <li aria-hidden="true"><i class="fab fa-python"></i>Python</li>
+        <li aria-hidden="true"><i class="fa-solid fa-database"></i>SQL</li>
+        <li aria-hidden="true"><i class="fa-solid fa-layer-group"></i>Microsoft Fabric</li>
+        <li aria-hidden="true"><i class="fa-solid fa-wind"></i>Apache Airflow</li>
+        <li aria-hidden="true"><i class="fa-solid fa-snowflake"></i>Snowflake</li>
+        <li aria-hidden="true"><i class="fa-solid fa-fire"></i>Spark</li>
+        <li aria-hidden="true"><i class="fa-brands fa-microsoft"></i>Azure Data Factory</li>
+        <li aria-hidden="true"><i class="fa-solid fa-chart-line"></i>scikit-learn</li>
+        <li aria-hidden="true"><i class="fa-solid fa-bolt"></i>FastAPI</li>
+        <li aria-hidden="true"><i class="fa-brands fa-docker"></i>Docker</li>
+        <li aria-hidden="true"><i class="fa-solid fa-chart-pie"></i>Power BI</li>
+      </ul>
+    </div>
 
-    <!-- Footer with Enhanced Design -->
-    <footer class="relative bg-gradient-to-b from-gray-900 via-blue-900 to-gray-900 text-white py-16">
-        <!-- Decorative Top Wave -->
-        <div class="absolute top-0 left-0 w-full overflow-hidden">
-            <svg class="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                    class="fill-gray-900"></path>
-            </svg>
+    <!-- ================= ABOUT ================= -->
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">01 — About</p>
+          <h2 class="section__title">Engineering AI and data solutions that hold up in production</h2>
+        </div>
+        <div class="about__grid" data-split>
+          <div class="about__text reveal">
+            <p>
+              I specialize in <strong>Data Science and AI</strong>, with a strong engineering foundation and a focus on
+              developing intelligent, scalable, and production-ready solutions.
+            </p>
+            <p>
+              My technical expertise spans <strong>LLM-powered applications</strong>, <strong>agentic and multi-agent systems</strong>,
+              AI agent architecture design, <strong>AI-powered automation</strong>, scalable <strong>data engineering</strong> pipelines,
+              and <strong>Python backend</strong> services.
+            </p>
+            <p>
+              I adopt an <strong>AI-first engineering mindset</strong>, combining independent problem-solving, technical expertise,
+              and human judgment to strategically guide, refine, and validate AI-driven outcomes. I leverage AI effectively and
+              responsibly through a <strong>human-in-the-loop</strong> approach and <strong>Specification-Driven Development (SDD)</strong>,
+              maintaining technical ownership throughout the engineering process.
+            </p>
+            <p class="muted">
+              My career ambition is to operate at the intersection of <strong>Data Science, AI, and Forward Deployed Engineering</strong>,
+              combining analytical thinking, technical expertise, and practical engineering to solve complex real-world problems
+              and deliver impactful, scalable, and production-ready solutions.
+            </p>
+          </div>
+          <div class="focus-grid" data-split>
+            <article class="card is-ai reveal">
+              <div class="card__icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+              <h3>AI Engineering</h3>
+              <p>LLM applications, Agentic AI, multi-agent systems, agent architecture, RAG and intelligent automation.</p>
+            </article>
+            <article class="card reveal">
+              <div class="card__icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+              <h3>Data Science &amp; Engineering</h3>
+              <p>Machine learning, analytics, ETL/ELT, data pipelines, data warehousing and Microsoft Fabric.</p>
+            </article>
+            <article class="card reveal">
+              <div class="card__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+              <h3>Software Engineering</h3>
+              <p>Python, SQL, backend and API development, system integration and low-code development.</p>
+            </article>
+            <article class="card reveal">
+              <div class="card__icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+              <h3>Development Practices</h3>
+              <p>Specification-Driven Development, AI-assisted development, solution architecture and workflow automation.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW I BUILD AI (lifecycle, scroll-driven) ================= -->
+    <section class="section" id="approach">
+      <div class="container">
+        <div class="story" data-story>
+        <div class="story__sticky">
+        <div class="section__head reveal">
+          <p class="eyebrow">02 — How I build AI</p>
+          <h2 class="section__title">Using AI properly. Building it to last.</h2>
+          <p class="section__lead">Anyone can call an LLM. Making AI reliable, safe and genuinely useful takes engineering discipline. This is the lifecycle I follow, from the first spec to production. <span class="story__hint">Scroll through the lifecycle.</span></p>
         </div>
 
-        <div class="container mx-auto px-4 pt-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-                <!-- Brand Section -->
-                <div class="text-center md:text-left">
-                    <a href="#" class="inline-block group">
-                        <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent mb-4">
-                            Keirish<span class="text-blue-400">.ds</span>
-                        </h3>
-                    </a>
-                    <p class="text-gray-300 mb-6">Crafting smart solutions through data and hardware innovation</p>
-                    <!-- Social Links with Enhanced Hover Effects -->
-                    <div class="flex space-x-6 justify-center md:justify-start">
-                        <a href="https://github.com/Keirishan" target="_blank" 
-                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/" target="_blank"
-                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
-                        <a href="https://medium.com/@keirish15" target="_blank"
-                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
-                            <i class="fab fa-medium text-2xl"></i>
-                        </a>
-                        <a href="mailto:keirishanb@outlook.com"
-                           class="transform hover:-translate-y-1 hover:text-blue-400 transition-all duration-300">
-                            <i class="fas fa-envelope text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
+        <div class="pipeline reveal" role="list" aria-label="AI engineering lifecycle">
+          <div class="p-node" style="--i:0" role="listitem">
+            <span class="p-node__tag">Spec</span>
+            <div class="p-node__icon"><i class="fa-solid fa-file-signature" aria-hidden="true"></i></div>
+            <h3>Specify</h3>
+            <p>Goals, constraints and acceptance criteria first</p>
+          </div>
+          <div class="p-link" style="--i:0" aria-hidden="true"></div>
+          <div class="p-node" style="--i:1" role="listitem">
+            <span class="p-node__tag">Data</span>
+            <div class="p-node__icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+            <h3>Ground in data</h3>
+            <p>Clean pipelines, RAG and trusted context</p>
+          </div>
+          <div class="p-link p-link--ai" style="--i:1" aria-hidden="true"></div>
+          <div class="p-node p-node--ai" style="--i:2" role="listitem">
+            <span class="p-node__tag">AI</span>
+            <div class="p-node__icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+            <h3>Architect</h3>
+            <p>The right agent pattern, tools and orchestration</p>
+          </div>
+          <div class="p-link p-link--ai" style="--i:2" aria-hidden="true"></div>
+          <div class="p-node p-node--ai" style="--i:3" role="listitem">
+            <div class="p-node__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+            <h3>Build with AI</h3>
+            <p>AI-assisted, human-reviewed, tested</p>
+          </div>
+          <div class="p-link p-link--ai" style="--i:3" aria-hidden="true"></div>
+          <div class="p-node p-node--ai" style="--i:4" role="listitem">
+            <div class="p-node__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+            <h3>Evaluate &amp; guard</h3>
+            <p>Evals, grounding checks and guardrails</p>
+          </div>
+          <div class="p-link p-link--ai" style="--i:4" aria-hidden="true"></div>
+          <div class="p-node p-node--ai" style="--i:5" role="listitem">
+            <div class="p-node__icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+            <h3>Ship &amp; monitor</h3>
+            <p>Observe, measure and keep improving</p>
+          </div>
+        </div>
 
-                <!-- Quick Links -->
-                <div class="text-center">
-                    <h4 class="text-xl font-semibold mb-6 text-blue-300">Quick Links</h4>
-                    <div class="flex flex-col space-y-3">
-                        <a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">About</a>
-                        <a href="experience.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Experience</a>
-                        <a href="skills.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Skills and Certification</a>
-                        <a href="projects.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Projects</a>
-                        <a href="publications.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Publications</a>
-                    </div>
-                </div>
+        <div class="story__progress" aria-hidden="true"><span></span></div>
 
-                <!-- Contact Info -->
-                <div class="text-center md:text-right">
-                    <h4 class="text-xl font-semibold mb-6 text-blue-300">Contact</h4>
-                    <div class="space-y-3">
-                        <p class="text-gray-300 flex items-center justify-center md:justify-end gap-2">
-                            <i class="fas fa-envelope text-blue-400"></i>
-                            keirishanb@outlook.com
-                        </p>
-                        <p class="text-gray-300 flex items-center justify-center md:justify-end gap-2">
-                            <i class="fas fa-map-marker-alt text-blue-400"></i>
-                            Sri Lanka
-                        </p>
-                    </div>
+        <!-- Split detail panel: changes with scroll position -->
+        <div class="stage-panel reveal" aria-live="polite">
+          <div class="stage" data-stage="0">
+            <div class="stage__left"><span class="stage__num">01<small>/06</small></span><h3>Specify</h3><p class="stage__kicker">Clarity before code, and before prompts</p></div>
+            <div class="stage__right"><p>Every AI feature starts as a specification: the problem, the users, the constraints and measurable acceptance criteria. Specification-Driven Development keeps AI work focused, testable and easy to maintain.</p><ul class="chips"><li class="chip chip--accent">Specification-Driven Dev</li><li class="chip">Acceptance criteria</li><li class="chip">Solution architecture</li></ul></div>
+          </div>
+          <div class="stage" data-stage="1">
+            <div class="stage__left"><span class="stage__num">02<small>/06</small></span><h3>Ground in data</h3><p class="stage__kicker">AI is only as good as its context</p></div>
+            <div class="stage__right"><p>Reliable pipelines and quality-checked data feed the model the right context. Retrieval-Augmented Generation keeps answers grounded in real sources, not guesses.</p><ul class="chips"><li class="chip chip--accent">RAG</li><li class="chip chip--accent">Data pipelines · ETL</li><li class="chip">Vector databases</li><li class="chip">Microsoft Fabric</li></ul></div>
+          </div>
+          <div class="stage is-ai" data-stage="2">
+            <div class="stage__left"><span class="stage__num">03<small>/06</small></span><h3>Architect</h3><p class="stage__kicker">The simplest design that works</p></div>
+            <div class="stage__right"><p>I choose the right pattern for the job: a single LLM call, a workflow, one agent or a multi-agent system. Tools, permissions and orchestration are designed deliberately, not added ad hoc.</p><ul class="chips"><li class="chip chip--ai">Agent architecture</li><li class="chip chip--ai">Multi-agent systems</li><li class="chip chip--ai">Tool use</li><li class="chip">Claude</li></ul></div>
+          </div>
+          <div class="stage is-ai" data-stage="3">
+            <div class="stage__left"><span class="stage__num">04<small>/06</small></span><h3>Build with AI</h3><p class="stage__kicker">AI accelerates; engineers stay accountable</p></div>
+            <div class="stage__right"><p>I use AI-assisted development to move faster, while I review, test and own every change. The spec guides the AI, and the tests confirm the result.</p><ul class="chips"><li class="chip chip--ai">AI-assisted development</li><li class="chip">Code review</li><li class="chip">Automated tests</li><li class="chip">Python · FastAPI</li></ul></div>
+          </div>
+          <div class="stage is-ai" data-stage="4">
+            <div class="stage__left"><span class="stage__num">05<small>/06</small></span><h3>Evaluate &amp; guard</h3><p class="stage__kicker">Measured, not assumed</p></div>
+            <div class="stage__right"><p>Outputs are evaluated against the spec for accuracy and groundedness. Guardrails, least-privilege tool access and prompt-injection defences keep the system safe.</p><ul class="chips"><li class="chip chip--ai">LLM evaluation</li><li class="chip chip--ai">Guardrails</li><li class="chip">Prompt-injection defence</li><li class="chip">Data privacy</li></ul></div>
+          </div>
+          <div class="stage is-ai" data-stage="5">
+            <div class="stage__left"><span class="stage__num">06<small>/06</small></span><h3>Ship &amp; monitor</h3><p class="stage__kicker">Production is where learning starts</p></div>
+            <div class="stage__right"><p>Deployed behind clean APIs, with logging and tracing to watch quality, latency and cost. Real-world feedback flows back into the spec, and the cycle continues.</p><ul class="chips"><li class="chip chip--ai">Observability</li><li class="chip">Cost &amp; latency</li><li class="chip">Feedback loops</li><li class="chip">Continuous improvement</li></ul></div>
+          </div>
+        </div>
+
+        <div class="pipeline-legend reveal">
+          <span><i style="background: var(--accent)"></i> Engineering foundations &amp; data</span>
+          <span><i style="background: var(--ai)"></i> AI engineering</span>
+        </div>
+        </div><!-- /story__sticky -->
+        </div><!-- /story -->
+
+        <p class="subhead reveal">How I use AI the right way</p>
+        <div class="principles" data-split>
+          <article class="card reveal">
+            <div class="card__icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+            <h3>Right tool for the job</h3>
+            <p>I use AI where it adds real value, and plain, deterministic code where it doesn't. Not everything needs an LLM.</p>
+          </article>
+          <article class="card is-ai reveal">
+            <div class="card__icon"><i class="fa-solid fa-user-check" aria-hidden="true"></i></div>
+            <h3>Human in the loop</h3>
+            <p>AI speeds up the work, but I review, test and take ownership of every output and every decision it informs.</p>
+          </article>
+          <article class="card is-ai reveal">
+            <div class="card__icon"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
+            <h3>Secure &amp; responsible</h3>
+            <p>Data privacy, least-privilege access and guardrails against misuse are designed in from the start, not added later.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="tenure" aria-live="polite">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span data-tenure>3 years 3 months</span>
+            <span class="tenure__label">of industry experience</span>
+          </p>
+          <h2 class="section__title">Where I've worked</h2>
+        </div>
+
+        <ol class="timeline" data-timeline>
+          <li class="tl-item reveal">
+            <div class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3 class="tl-role">Software Engineer</h3>
+                  <p class="tl-org">LOWCODEMINDS · Colombo, Sri Lanka</p>
                 </div>
+                <span class="tl-date">Sep 2024 – Present</span>
+              </div>
+              <p class="tl-lead">I deliver AI and data solutions end to end, from requirements and architecture through backend, evaluation and deployment.</p>
+
+              <!-- Flagship project -->
+              <div class="tl-proj tl-proj--featured is-ai">
+                <div class="tl-proj__head">
+                  <h4><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Agentic AI Billing Automation</h4>
+                  <span class="tl-proj__badge">Flagship</span>
+                </div>
+                <p>Agentic AI platform that automates revenue variance analysis. A <strong>LangGraph</strong> orchestrator routes billing records to specialised agents for research, trend analysis and contract review, using vector-based memory over emails and contracts to explain anomalies with evidence. I worked on it end to end, from architecture to LLM evaluation, human-in-the-loop validation and monitoring.</p>
+                <ul class="chips">
+                  <li class="chip chip--ai">LangGraph</li>
+                  <li class="chip chip--ai">Multi-Agent Systems</li>
+                  <li class="chip chip--ai">Vector Retrieval</li>
+                  <li class="chip chip--ai">LLM Evaluation</li>
+                  <li class="chip">Human-in-the-loop</li>
+                  <li class="chip">Python</li>
+                </ul>
+              </div>
+
+              <!-- Other projects -->
+              <div class="tl-projects" data-split>
+                <div class="tl-proj reveal">
+                  <div class="tl-proj__head">
+                    <h4><i class="fa-solid fa-user-tie" aria-hidden="true"></i> AI-Powered Recruitment Platform</h4>
+                    <span class="tl-proj__badge tl-proj__badge--award"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Hackathon runner-up</span>
+                  </div>
+                  <p>End-to-end hiring platform: job creation, resume parsing, AI-assisted candidate matching, interview workflows and onboarding.</p>
+                  <p class="tl-proj__stack">Azure OpenAI · RAG · n8n · FastAPI · Next.js</p>
+                </div>
+                <div class="tl-proj reveal">
+                  <div class="tl-proj__head">
+                    <h4><i class="fa-solid fa-code-compare" aria-hidden="true"></i> Legacy Application Modernization</h4>
+                  </div>
+                  <p>Migrated a legacy enterprise application to .NET, Java and Python, using AI-assisted development to speed up code understanding, migration and validation while keeping engineering quality high.</p>
+                  <p class="tl-proj__stack">AI-assisted development · .NET · Java · Python</p>
+                </div>
+                <div class="tl-proj reveal">
+                  <div class="tl-proj__head">
+                    <h4><i class="fa-solid fa-store" aria-hidden="true"></i> Outlet Development Platform</h4>
+                  </div>
+                  <p>Built Python backend services for an outlet-management application, integrated MySQL, supported the frontend and helped deploy to the cloud.</p>
+                  <p class="tl-proj__stack">Python · FastAPI · MySQL · Cloud deployment</p>
+                </div>
+                <div class="tl-proj reveal">
+                  <div class="tl-proj__head">
+                    <h4><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Legal AI <small>(Proof of Concept)</small></h4>
+                  </div>
+                  <p>Legal-process automation prototype with AI-assisted workflows on Azure AI Foundry, delivered quickly by choosing a low-code platform that fitted the requirements.</p>
+                  <p class="tl-proj__stack">Azure AI Foundry · Low-code · AI workflows</p>
+                </div>
+              </div>
             </div>
+          </li>
+        </ol>
 
-            <!-- Copyright with Gradient Border -->
-            <div class="pt-8 mt-8 text-center border-t border-gray-700">
-                <p class="text-gray-400">
-                    <span class="bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
-                        &copy; 2025 Keirish
-                    </span>
-                    • All rights reserved
-                </p>
+        <p class="subhead reveal">Earlier work</p>
+        <div class="earlier" data-split>
+          <div class="tl-card reveal">
+            <div class="tl-head">
+              <div>
+                <h3 class="tl-role">Embedded Systems Intern</h3>
+                <p class="tl-org">SilverlineIT</p>
+              </div>
+              <span class="tl-date">Apr 2024 – Aug 2024</span>
             </div>
+            <p>Built IoT products (automated irrigation, smart toys) with device telemetry over MQTT and cloud data synchronization through Firebase.</p>
+          </div>
+          <div class="tl-card reveal">
+            <div class="tl-head">
+              <div>
+                <h3 class="tl-role">R&amp;D Intern</h3>
+                <p class="tl-org">SLT Mobitel – Digital Lab</p>
+              </div>
+              <span class="tl-date">Aug 2023 – Feb 2024</span>
+            </div>
+            <p>Developed an IoT-based hybrid energy monitoring system (APMS), collecting sensor data and building real-time dashboards for analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">04 — Education &amp; Certifications</p>
+          <h2 class="section__title">Academic foundation</h2>
         </div>
 
-        <!-- Decorative Particles Effect -->
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-            <div class="absolute top-40 right-20 w-2 h-2 bg-blue-300 rounded-full animate-ping" style="animation-delay: 1s"></div>
-            <div class="absolute bottom-20 left-1/4 w-2 h-2 bg-blue-500 rounded-full animate-ping" style="animation-delay: 2s"></div>
+        <div class="edu-grid" data-split>
+          <article class="card edu reveal">
+            <div class="edu__top">
+              <span class="tl-date">2025 – Present</span>
+              <!-- Change to data-status="completed" once the degree is awarded -->
+              <span data-status="in-progress">In progress</span>
+            </div>
+            <h3 class="edu__degree">MSc in Computer Science</h3>
+            <p class="edu__spec">Specializing in Data Science Engineering &amp; Analytics</p>
+            <p class="edu__school">University of Moratuwa</p>
+            <ul class="chips">
+              <li class="chip">Machine Learning</li>
+              <li class="chip">Big Data Analytics Technologies</li>
+              <li class="chip">Data Mining</li>
+              <li class="chip">Business Intelligence</li>
+              <li class="chip">Statistical Inference</li>
+              <li class="chip">Software Architecture Concepts</li>
+              <li class="chip">Bio-Informatics</li>
+            </ul>
+          </article>
+          <article class="card edu reveal">
+            <div class="edu__top">
+              <span class="tl-date">2020 – 2024</span>
+              <span data-status="completed">Completed</span>
+            </div>
+            <h3 class="edu__degree">BSc (Hons) in Engineering</h3>
+            <p class="edu__spec">Electronics &amp; Telecommunication Engineering</p>
+            <p class="edu__school">Sri Lanka Technology Campus (SLTC)</p>
+            <!-- <ul class="chips">
+              <li class="chip">Engineering Mathematics</li>
+              <li class="chip">Digital Systems</li>
+              <li class="chip">Computer Vision (FYP)</li>
+            </ul> -->
+          </article>
         </div>
-    </footer>
 
-    <script>
-        // Cursor follower
-        document.addEventListener('DOMContentLoaded', () => {
-            const cursor = document.querySelector('.cursor-follower');
-            
-            // Only initialize on desktop
-            if (window.matchMedia('(hover: hover)').matches) {
-                let mouseX = 0, mouseY = 0;
-                let cursorX = 0, cursorY = 0;
+        <p class="subhead reveal">Certifications</p>
+        <div class="cert-grid" data-split>
+          <article class="card cert is-ai reveal">
+            <img src="img/badge/claude-certified-architect-foundations.png" alt="Claude Certified Architect – Foundations badge" loading="lazy">
+            <div>
+              <h3>Claude Certified Architect – Foundations</h3>
+              <p class="cert__meta">Anthropic · Issued Sep 2026</p>
+              <a class="cert__link" href="https://www.credly.com/badges/62e671e0-d7f8-4846-a561-b3838c26d10c/linked_in_profile" target="_blank" rel="noopener">Verify credential <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="card cert reveal">
+            <img src="img/badge/microsoft-certified-fundamentals-badge.png" alt="Microsoft Certified: Azure Data Fundamentals badge" loading="lazy">
+            <div>
+              <h3>Microsoft Certified: Azure Data Fundamentals</h3>
+              <p class="cert__meta">Microsoft · Issued Jul 2025 · ID F7DF7BCC65CB7DF</p>
+              <a class="cert__link" href="https://learn.microsoft.com/api/credentials/share/en-us/BalachandranKeirishan-0814/F7DF7BCC65CB7DF?sharingId" target="_blank" rel="noopener">Verify credential <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                // Smooth follow animation
-                const animate = () => {
-                    const diffX = mouseX - cursorX;
-                    const diffY = mouseY - cursorY;
-                    
-                    cursorX += diffX * 1;
-                    cursorY += diffY * 1;
-                    
-                    cursor.style.left = cursorX + 'px';
-                    cursor.style.top = cursorY + 'px';
-                    
-                    requestAnimationFrame(animate);
-                };
+    <!-- ================= SKILLS ================= -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">05 — Skills</p>
+          <h2 class="section__title">Technical toolkit</h2>
+          <p class="section__lead">Grouped by how I use them day to day, from AI systems to the data platforms underneath.</p>
+        </div>
+        <div class="skills-grid" data-split>
+          <div class="card skill-group is-ai reveal">
+            <h3><i class="fa-solid fa-robot" aria-hidden="true"></i> AI Engineering</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">LLM Applications</li>
+              <li class="chip chip--accent">Agentic AI</li>
+              <li class="chip chip--accent">Multi-Agent Systems</li>
+              <li class="chip">Agent Architecture</li>
+              <li class="chip">RAG</li>
+              <li class="chip">Vector Databases</li>
+              <li class="chip">Embeddings &amp; Semantic Search</li>
+              <li class="chip">Prompt Engineering</li>
+              <li class="chip">Claude</li>
+            </ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Data Science &amp; Engineering</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">Machine Learning</li>
+              <li class="chip">scikit-learn</li>
+              <li class="chip">Pandas</li>
+              <li class="chip">NumPy</li>
+              <li class="chip chip--accent">ETL / ELT</li>
+              <li class="chip">Apache Airflow</li>
+              <li class="chip">Snowflake</li>
+              <li class="chip">Apache Spark</li>
+              <li class="chip">Microsoft Fabric</li>
+              <li class="chip">Azure Data Factory</li>
+              <li class="chip">Databricks</li>
+              <li class="chip">Power BI</li>
+              <li class="chip">Tableau</li>
+            </ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Software &amp; Cloud</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">Python</li>
+              <li class="chip chip--accent">SQL</li>
+              <li class="chip">FastAPI</li>
+              <li class="chip">REST APIs</li>
+              <li class="chip">MySQL</li>
+              <li class="chip">MongoDB</li>
+              <li class="chip">Azure</li>
+              <li class="chip">AWS</li>
+              <li class="chip">GCP</li>
+              <li class="chip">Docker</li>
+              <li class="chip">Git &amp; GitHub</li>
+              <li class="chip">CI/CD</li>
+            </ul>
+          </div>
+          <div class="card skill-group reveal">
+            <h3><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Practices</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">Specification-Driven Development</li>
+              <li class="chip">AI-Assisted Development</li>
+              <li class="chip">Solution Architecture</li>
+              <li class="chip">Workflow Automation</li>
+              <li class="chip">System Integration</li>
+              <li class="chip">Low-Code Development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                // Track mouse movement
-                document.addEventListener('mousemove', (e) => {
-                    mouseX = e.clientX;
-                    mouseY = e.clientY;
-                });
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow">06 — Projects</p>
+            <h2 class="section__title">Featured work</h2>
+          </div>
+          <a href="projects.html" class="btn btn--ghost btn--sm">See all projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="project-grid">
+          <article class="project is-ai reveal">
+            <div class="project__media"><img src="img/data_cleaning.png" alt="Automated data cleaning agent workflow" loading="lazy"></div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__cat cat--both">AI Agent · Data</span><span class="project__year">2025</span></div>
+              <h3>Automated Data Cleaning Agent</h3>
+              <p>An autonomous agent that takes raw datasets through a five-phase workflow, with quality assessment and validation gates, to produce ML-ready data.</p>
+              <ul class="chips"><li class="chip">Python</li><li class="chip">Pandas</li><li class="chip">scikit-learn</li></ul>
+              <div class="project__links"><a href="https://github.com/Keirishan/data-cleaning-agent" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a></div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__media"><img src="img/Azure_Data_Pipeline.png" alt="Azure medallion data pipeline architecture" loading="lazy"></div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__cat">Data Engineering</span><span class="project__year">2025</span></div>
+              <h3>Azure Lakehouse Data Pipeline</h3>
+              <p>End-to-end Bronze/Silver/Gold pipeline using Data Factory, Data Lake Gen2 and Databricks, served through Synapse and Power BI with Key Vault security.</p>
+              <ul class="chips"><li class="chip">ADF</li><li class="chip">Databricks</li><li class="chip">Synapse</li><li class="chip">Power BI</li></ul>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__media"><img src="img/ATS.png" alt="ATS resume checker interface" loading="lazy"></div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__cat">NLP</span><span class="project__year">2025</span></div>
+              <h3>ATS Resume Checker</h3>
+              <p>Scores resumes against job descriptions with NLP keyword matching, simulating an Applicant Tracking System and giving actionable feedback.</p>
+              <ul class="chips"><li class="chip">spaCy</li><li class="chip">scikit-learn</li><li class="chip">Streamlit</li></ul>
+              <div class="project__links"><a href="https://github.com/Keirishan/ATS-Resume-Checker" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                // Add hover effect for interactive elements
-                const interactiveElements = document.querySelectorAll('a, button, input, textarea');
-                interactiveElements.forEach(el => {
-                    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-                    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-                });
+    <!-- ================= PUBLICATIONS ================= -->
+    <section class="section section--alt" id="publications">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">07 — Publications &amp; Community</p>
+          <h2 class="section__title">Research and professional involvement</h2>
+        </div>
+        <div class="pub-list">
+          <article class="card row-card reveal">
+            <div class="card__icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
+            <div>
+              <h3>Computer Vision and Deep Learning Based Assistance System for the Visually Impaired</h3>
+              <p class="muted">International Research Conference (IRC), Sri Lanka Technology Campus.
+                <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=sqV9qkkAAAAJ&amp;citation_for_view=sqV9qkkAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">View on Google Scholar</a></p>
+            </div>
+            <span class="row-card__date">2023</span>
+          </article>
+          <article class="card row-card reveal">
+            <div class="card__icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+            <div>
+              <h3>IEEE Student Member</h3>
+              <p class="muted">Professional association membership since 2023.</p>
+            </div>
+            <span class="row-card__date">2023 – Present</span>
+          </article>
+          <article class="card row-card reveal">
+            <div class="card__icon"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i></div>
+            <div>
+              <h3>Deputy Head, IEEE Industrial Electronics Society SB</h3>
+              <p class="muted">Sri Lanka Technology Campus. Also a member of the IEEE Student Branch (Jun 2020 – Mar 2024).</p>
+            </div>
+            <span class="row-card__date">2021 – 2022</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                // Hide cursor when mouse leaves window
-                document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
-                document.addEventListener('mouseenter', () => cursor.style.opacity = '0.7');
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact__grid" data-split>
+          <div class="reveal">
+            <p class="eyebrow">08 — Contact</p>
+            <h2 class="section__title">Let's work together</h2>
+            <p class="section__lead">Open to roles and collaborations in AI engineering, data engineering and data science. Send a message and I'll reply within 24 hours.</p>
+            <ul class="contact__list">
+              <li>
+                <span class="card__icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                <div><small>Email</small><a href="mailto:keirishanb@outlook.com">keirishanb@outlook.com</a></div>
+              </li>
+              <li>
+                <span class="card__icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
+                <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/" target="_blank" rel="noopener">Balachandran Keirishan</a></div>
+              </li>
+              <li>
+                <span class="card__icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                <div><small>Location</small>Sri Lanka</div>
+              </li>
+            </ul>
+          </div>
+          <form id="contact-form" class="card form reveal" method="post"
+                action="https://script.google.com/macros/s/AKfycbxymgLYpsJexGiHF7IG2idaE58YJNXr6khcGVbL3Dfx7pbXxdSwWrty-zlks9MRK2Ug/exec">
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn--primary">Send message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                // Start animation
-                animate();
-            }
-        });
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span data-year>2026</span> Keirishan Balachandran · AI &amp; Data Engineer</p>
+      <div class="footer__social">
+        <a class="icon-link" href="https://github.com/Keirishan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a class="icon-link" href="https://www.linkedin.com/in/balachandran-keirishan-6a5a66197/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a class="icon-link" href="https://medium.com/@keirish15" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium"></i></a>
+        <a class="icon-link" href="mailto:keirishanb@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu when a link is clicked
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileMenu.classList.contains('block')) {
-                    mobileMenu.classList.remove('block');
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-<!-- Typing Script -->
-<script>
-    const roles = ["Data Scientist"];
-    let roleIndex = 0, charIndex = 0, isDeleting = false;
-    const typingSpeed = 120;
-    const waitTime = 1000;
-    const typedText = document.getElementById("typed-role");
-  
-    function typeRole() {
-      const current = roles[roleIndex];
-      if (isDeleting) {
-        typedText.textContent = current.substring(0, charIndex--);
-      } else {
-        typedText.textContent = current.substring(0, charIndex++);
-      }
-  
-      if (!isDeleting && charIndex === current.length + 1) {
-        isDeleting = true;
-        setTimeout(typeRole, waitTime);
-        return;
-      }
-  
-      if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-      }
-  
-      setTimeout(typeRole, isDeleting ? 50 : typingSpeed);
-    }
-  
-    document.addEventListener("DOMContentLoaded", typeRole);
-</script>
-  
-<script>
-    // Disable right-click
-    document.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
-    });
-  
-    // Disable specific key combinations
-    document.addEventListener('keydown', function (e) {
-      // Ctrl+U
-      if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-      }
-      // Ctrl+Shift+I (Dev Tools)
-      if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        e.preventDefault();
-      }
-      // F12
-      if (e.key === 'F12') {
-        e.preventDefault();
-      }
-      // Ctrl+Shift+C (Inspect)
-      if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-        e.preventDefault();
-      }
-      // Ctrl+Shift+J (Console)
-      if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-        e.preventDefault();
-      }
-    });
-</script>
