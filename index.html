@@ -701,7 +701,7 @@
             </ul>
           </div>
           <form id="contact-form" class="card form reveal" method="post"
-                action="https://script.google.com/macros/s/AKfycbxymgLYpsJexGiHF7IG2idaE58YJNXr6khcGVbL3Dfx7pbXxdSwWrty-zlks9MRK2Ug/exec">
+                action="https://script.google.com/macros/s/AKfycbzLSEdnBkMS2zM_fq7-9iGUDah9WbMLwK1TufhewIfbMDpFrhP01tr9rgLa3B3YgJn2/exec">
             <div class="form__row">
               <div class="field">
                 <label for="name">Name</label>
@@ -720,6 +720,12 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
+            <!-- spam trap: hidden from people, bots fill it and get silently ignored -->
+            <div class="form__hp" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="page" value="">
             <div>
               <button type="submit" class="btn btn--primary">Send message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
             </div>

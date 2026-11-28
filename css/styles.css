@@ -459,6 +459,7 @@ details.archive .project-grid { margin-top: 24px; }
 .field textarea { resize: vertical; min-height: 130px; }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .form__status { font-size: 14px; min-height: 1.4em; }
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form__status.is-ok { color: var(--accent); }
 .form__status.is-err { color: #F87171; }
 

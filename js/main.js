@@ -599,6 +599,7 @@ const CAREER_START = '2023-08'; // first industry role (YYYY-MM)
       status.className = 'form__status';
       status.textContent = 'Sending…';
       try {
+        if (form.elements.page) form.elements.page.value = location.href.split('#')[0];
         await fetch(form.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) });
         form.reset();
         status.classList.add('is-ok');
